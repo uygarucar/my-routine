@@ -3,7 +3,27 @@ const constantColors = {
     white: '#FFFFFF',
     black: '#000000',
     transparent: 'transparent',
-    pink: '#ff9cf7'
+    mainColor1: '#796FB2', //light mode: light purple
+	mainColor2: '#202454', //dark mode: dark blue
+	greys: {
+		1: '#ACACAC', //light mode: settings - seçili olmayan ikon rengi
+		2: '#7F7F7F', //light mode: çöp tenekesi ikonu rengi
+		3: '#393636', //ligth + dark: placeholder  -  dark: background
+		4: '#D6D6D6', //light: Home- input box border'ı
+		5: '#959595'
+	},
+	blues: {
+		1: '#1C0C7B', //light mode: "Giriş Yap" yazısı
+		
+		//light mode: "+" butonunun rengi
+		//light mode: settings -  seçili ikonun rengi
+		//light mode: settings - Renk Teması ve Dil isimlendirmeleri
+		//light mode: Yeni Ekle sf. - Bugün yazısı
+		2: '#433591', 
+		3: '#1C0C7B', //light mode: Anasayfa - Modal butonunda çıkan isimlendirme - Örn:işten dönerken
+		4: '#32538D',
+		5: '#202454'
+	},
 };
 
 const toRGBA = (hexCode, opacity) => {
@@ -20,8 +40,7 @@ const toRGBA = (hexCode, opacity) => {
     return `rgba(${r},${g},${b},${opacity / 100})`;
 };
 
-export const colorNames = {
-    auth: {
+ const auth = {
         background: 'auth/background',
         inputBorder: 'auth/inputBorder',
         inputBackground: 'auth/inputBackground',
@@ -31,16 +50,117 @@ export const colorNames = {
         coloredButtonText: 'auth/coloredButtonText',
         paleButtonBackground: 'auth/paleButtonBackground',
         paleButtonText: 'auth/paleButtonText',
-        appNameText: 'auth/appNameText',
-    },
+        appNameText: 'auth/appNameText'
 };
 
-export const darkColors = {
-    // auth
-    [colorNames.auth.background]: constantColors.pink, // örnek
+const home = {
+		background:'home/background',
+		routinesText:'home/routinesText',
+		routinesBorder:'home/routinesBorder',
+		routinesBackground:'home/routinesBackground',
+		addButtonBackground:'home/addButtonBackground',
+		
 };
+
+const settings = {
+		background: 'settings/background',
+		usernameText: 'settings/usernameText',
+		userEmailText: 'settings/userEmailText',
+		titleText: 'settings/titleText',
+		radioButtonUnselectedIcon: 'settings/radioButtonUnselectedIcon',
+		radioButtonSelectedIcon: 'settings/radioButtonSelectedIcon',
+		radioButtonText: 'settings/radioButtonText',
+		signOutButtonBackground: 'settings/signOutButtonBackground',
+		signOutButtonBorder: 'settings/signOutButtonBorder',
+		signOutButtonText: 'settings/signOutButtonText'
+};
+
+const header = {
+		background: 'header/background',
+		text: 'header/text',
+		backIcon: 'header/backIcon',
+		rightIcon: 'header/rightIcon'
+}
+
+export const cn={
+	auth,
+	settings,
+	header,
+	home
+}
 
 export const lightColors = {
     // auth
-    [colorNames.auth.background]: constantColors.pink, // örnek
+    [auth.background]: constantColors.mainColor1,
+    [auth.inputBorder]: constantColors.white,
+    [auth.inputBackground]: toRGBA(constantColors.white, 20),
+    [auth.inputText]: toRGBA(constantColors.white, 79),
+    [auth.inputPlaceholder]: toRGBA(constantColors.greys[3], 40),
+    [auth.coloredButtonBackground]: constantColors.white,
+    [auth.coloredButtonText]: constantColors.blues[3],
+    [auth.paleButtonBackground]: constantColors.transparent,
+    [auth.paleButtonText]: constantColors.white,
+    [auth.appNameText]: constantColors.white,
+	//home
+	[home.background]: constantColors.white,
+	[home.routinesText]: constantColors.black,
+	[home.routinesBorder]: constantColors.greys[4],
+	[home.routinesBackground]: constantColors.transparent,
+	[home.addButtonBackground]: constantColors.blues[2],
+	//settings
+	[settings.background]: constantColors.white,
+	[settings.usernameText]: constantColors.black,
+	[settings.userEmailText]: constantColors.black,
+	[settings.titleText]: constantColors.blues[2],
+	[settings.radioButtonUnselectedIcon]: constantColors.greys[1],
+	[settings.radioButtonSelectedIcon]: constantColors.blues[2],
+	[settings.radioButtonText]: constantColors.black,
+	[settings.signOutButtonBackground]: constantColors.transparent,
+	[settings.signOutButtonBorder]: constantColors.blue[2],
+	[settings.signOutButtonText]: constantColors.black,
+	//header
+	[header.background]: constantColors.mainColor1,
+    [header.text]: constantColors.white,
+    [header.backIcon]: constantColors.white,
+    [header.rightIcon]: constantColors.white,
+	
 };
+
+
+export const darkColors = {
+    // auth
+    [auth.background]: constantColors.mainColor2,
+    [auth.inputBorder]: constantColors.white,
+    [auth.inputBackground]: toRGBA(constantColors.white, 20),
+    [auth.inputText]: toRGBA(constantColors.white, 79),
+    [auth.inputPlaceholder]: toRGBA(constantColors.greys[3], 40),
+    [auth.coloredButtonBackground]: constantColors.white,
+    [auth.coloredButtonText]: constantColors.blues[3],
+    [auth.paleButtonBackground]: constantColors.transparent,
+    [auth.paleButtonText]: constantColors.white,
+    [auth.appNameText]: constantColors.white,
+	//home
+	[home.background]: constantColors.greys[3],
+	[home.routinesText]: constantColors.black,
+	[home.routinesBorder]: constantColors.greys[4],
+	[home.routinesBackground]: constantColors.transparent,
+	[home.addButtonBackground]: constantColors.blues[2],
+	//settings
+	[settings.background]: constantColors.greys[3],
+	[settings.usernameText]: constantColors.white,
+	[settings.userEmailText]: constantColors.white,
+	[settings.titleText]: constantColors.greys[5],
+	[settings.radioButtonUnselectedIcon]: constantColors.greys[1],
+	[settings.radioButtonSelectedIcon]: constantColors.blues[4],
+	[settings.radioButtonText]: constantColors.white,
+	[settings.signOutButtonBackground]: constantColors.blues[5],
+	[settings.signOutButtonBorder]: constantColors.white,
+	[settings.signOutButtonText]: constantColors.white,
+	//header
+	[header.background]: constantColors.mainColor2,
+    [header.text]: constantColors.white,
+    [header.backIcon]: constantColors.white,
+    [header.rightIcon]: constantColors.white,
+	
+};
+
