@@ -116,7 +116,7 @@ export const lightColors = {
 	[settings.radioButtonSelectedIcon]: constantColors.blues[2],
 	[settings.radioButtonText]: constantColors.black,
 	[settings.signOutButtonBackground]: constantColors.transparent,
-	[settings.signOutButtonBorder]: constantColors.blue[2],
+	[settings.signOutButtonBorder]: constantColors.blues[2],
 	[settings.signOutButtonText]: constantColors.black,
 	//header
 	[header.background]: constantColors.mainColor1,
