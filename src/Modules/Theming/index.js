@@ -6,5 +6,5 @@ export {
     useDispatchChangeTheme,
  } from './CustomHooks/ThemingHooks';
 export { ThemeReducer } from './Redux/ThemingRedux';
-export { colorNames } from './Colors';
+export { cn } from './Colors';
 export { ThemeModes } from './ThemingConstants';
