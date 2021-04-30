@@ -1,11 +1,11 @@
-import validate from 'validate.js';
+// import validate from 'validate.js';
 
-export const isValidEmail = email => {
-    let constraints = {
-        from: {
-            email: true
-        }
-    };
+// export const isValidEmail = email => {
+//     let constraints = {
+//         from: {
+//             email: true
+//         }
+//     };
 
-    return validate({from: email}, constraints) === undefined;
-}
+//     return validate({from: email}, constraints) === undefined;
+// }
