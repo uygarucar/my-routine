@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-import SettingsScreen from '../Settings/Screens/SettingsScreen';
+//import SettingsScreen from '../Settings/Screens/SettingsScreen';
 import AuthScreen from '../Auth/Screens/AuthScreen';
 
 const AppStack = createStackNavigator();
