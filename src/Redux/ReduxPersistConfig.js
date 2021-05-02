@@ -1,6 +1,18 @@
 import AsyncStorage from '@react-native-community/async-storage';
-
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+// import { persistStore, persistReducer } from 'redux-persist';
+// import createSagaMiddleware from 'redux-saga';
+// import {createBlacklistFilter} from 'redux-persist-transform-filter';
 // More info here:  https://shift.infinite.red/shipping-persistant-reducers-7341691232b1
+import { ThemeReducer} from '../Modules/Theming/Redux/ThemingRedux';
+
+
+const rootReducer = combineReducers({
+  theme:ThemeReducer,
+});
+
+
+
 const REDUX_PERSIST = {
   active: true,
   storeConfig: {
@@ -11,7 +23,7 @@ const REDUX_PERSIST = {
     // Optionally, just specify the keys you DO want stored to persistence.
     // An empty array means 'don't store any reducers' -> infinitered/ignite#409
     whitelist: [
-      'dummy'
+      'theme'
     ],
   },
 };
