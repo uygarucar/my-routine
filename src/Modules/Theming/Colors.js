@@ -10,7 +10,8 @@ const constantColors = {
 		2: '#7F7F7F', //light mode: çöp tenekesi ikonu rengi
 		3: '#393636', //ligth + dark: placeholder  -  dark: background
 		4: '#D6D6D6', //light: Home- input box border'ı
-		5: '#959595'
+		5: '#959595',
+		6: '#C9C9C9' //dark mod: settigs - titleText, signOutButtonBorder, signOutButtonText
 	},
 	blues: {
 		1: '#1C0C7B', //light mode: "Giriş Yap" yazısı
@@ -149,13 +150,13 @@ export const darkColors = {
 	[settings.background]: constantColors.greys[3],
 	[settings.usernameText]: constantColors.white,
 	[settings.userEmailText]: constantColors.white,
-	[settings.titleText]: constantColors.greys[5],
+	[settings.titleText]: constantColors.blues[4],
 	[settings.radioButtonUnselectedIcon]: constantColors.greys[1],
 	[settings.radioButtonSelectedIcon]: constantColors.blues[4],
-	[settings.radioButtonText]: constantColors.white,
+	[settings.radioButtonText]: constantColors.greys[6],
 	[settings.signOutButtonBackground]: constantColors.blues[5],
-	[settings.signOutButtonBorder]: constantColors.white,
-	[settings.signOutButtonText]: constantColors.white,
+	[settings.signOutButtonBorder]: constantColors.greys[6],
+	[settings.signOutButtonText]: constantColors.greys[6],
 	//header
 	[header.background]: constantColors.mainColor2,
     [header.text]: constantColors.white,
