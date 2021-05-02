@@ -3,13 +3,14 @@ import React from 'react';
 import { TextInput, View } from 'react-native';
 
 import BorderedBox from '../../../Components/BorderedBox';
-import { useThemedValues, cn } from '../../Theming';
+import { useThemedStyles, useThemedColors, cn } from '../../Theming';
 
 import getStyles from '../styles/AuthInputStyles';
 
 const AuthInput = props => {
 
-    const {styles, colors} = useThemedValues(getStyles);
+    const styles = useThemedStyles(getStyles);
+    const colors = useThemedColors(getStyles);
 
     return (
         <BorderedBox borderColor={colors[cn.auth.inputBorder]}>
