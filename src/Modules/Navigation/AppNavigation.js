@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import SettingsScreen from '../Settings/Screens/SettingsScreen';
 import AuthScreen from '../Auth/Screens/AuthScreen';
+import MainScreen from '../Main/Screens/MainScreen'
 
 
 import { cn, useThemedColors } from '../Theming';
@@ -18,6 +19,13 @@ const AppNavigation = props => {
     const loc = useLocalization();
     return (
         <AppStack.Navigator>
+            <AppStack.Screen
+                name="main-screen"
+                component={MainScreen}
+                options={{
+                    title:'Anasayfa'
+                }}
+            />
             <AppStack.Screen
                 name="setting-screen"
                 component={SettingsScreen}
@@ -34,15 +42,12 @@ const AppNavigation = props => {
                     },
                     headerBackTitleVisible: false,
                     headerLeftContainerStyle: {
-                        marginLeft: Metrics.marginHorizontal * 0.7,
+                        marginLeft: Metrics.marginHorizontal * 0.1,
                     },
                     headerTintColor: colors[cn.header.backIcon]
                 }}
-                />
-                {/* <AppStack.Screen
-                name="auth-screen"
-                component={AuthScreen}
-                /> */}
+            />
+
 
         </AppStack.Navigator>
     );
