@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { cn } from '../../Theming';
- import {  Metrics } from '../../../StylingConstants';
+ import {  Metrics,Fonts } from '../../../StylingConstants';
 
 export default Colors => StyleSheet.create({
     container: {
@@ -10,16 +10,16 @@ export default Colors => StyleSheet.create({
              
     },
     nameText: {
-        // fontFamily: Fonts.type.bold,
-        // fontSize: Fonts.size(18),
-        // marginBottom: Metrics.width * 0.01,
+        fontFamily: Fonts.type.bold,
+        fontSize: Fonts.size(18),
+        marginBottom: Metrics.width * 0.01,
         color: Colors[cn.settings.usernameText],
     },
     emailText: {
-        // fontFamily: Fonts.type.regular,
-        // fontSize: Fonts.size(16),
+        fontFamily: Fonts.type.regular,
+        fontSize: Fonts.size(16),
         color: Colors[cn.settings.userEmailText],
-        // marginBottom: Metrics.width * 0.05,
+        marginBottom: Metrics.width * 0.05,
     },
     menusContainer: {
         flexGrow: 1,
@@ -35,7 +35,7 @@ export default Colors => StyleSheet.create({
         backgroundColor: Colors[cn.settings.signOutButtonBackground],
     },
     signOutText: {
-        // fontSize: Fonts.size(18),
+        fontSize: Fonts.size(18),
         color: Colors[cn.settings.signOutButtonText],
     }
 });

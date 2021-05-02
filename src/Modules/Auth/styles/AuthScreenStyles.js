@@ -63,7 +63,7 @@ const styles = (Colors) => StyleSheet.create({
         fontFamily: Fonts.type.logo,
         fontSize: Fonts.size(40),
         color: Colors[cn.auth.appNameText],
-        letterSpacing: Metrics.width * 0.02,
+        letterSpacing: Metrics.width * 0.01,
     },
 });
 

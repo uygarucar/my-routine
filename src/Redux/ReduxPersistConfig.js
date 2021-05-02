@@ -5,10 +5,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 // import {createBlacklistFilter} from 'redux-persist-transform-filter';
 // More info here:  https://shift.infinite.red/shipping-persistant-reducers-7341691232b1
 import { ThemeReducer} from '../Modules/Theming/Redux/ThemingRedux';
-
+// import localization
 
 const rootReducer = combineReducers({
   theme:ThemeReducer,
+// localization
 });
 
 
@@ -24,6 +25,7 @@ const REDUX_PERSIST = {
     // An empty array means 'don't store any reducers' -> infinitered/ignite#409
     whitelist: [
       'theme'
+//locale
     ],
   },
 };
