@@ -60,7 +60,7 @@ const styles = (Colors) => StyleSheet.create({
         color: Colors[cn.auth.paleButtonText],
     },
     appNameText: {
-        fontFamily: Fonts.type.logo,
+        fontFamily: Fonts.type.regular,
         fontSize: Fonts.size(40),
         color: Colors[cn.auth.appNameText],
         letterSpacing: Metrics.width * 0.01,

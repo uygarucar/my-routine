@@ -1,12 +1,9 @@
 import Metrics from './Metrics';
 
 const type = {
-  light: 'Quicksand-Light',
-  regular: 'Quicksand-Regular',
-  medium: 'Quicksand-Medium',
-  semibold: 'Quicksand-SemiBold',
-  bold: 'Quicksand-Bold',
-  logo: 'Overlock-Black',
+  regular: 'CenturyGothicRegular',
+  bold: 'CenturyGothicBold',
+
 };
 
 const step = Metrics.width * 0.0025;

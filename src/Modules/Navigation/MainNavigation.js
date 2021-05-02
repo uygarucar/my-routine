@@ -7,7 +7,7 @@ import AuthNavigation from './AuthNavigation';
 const MainNavigation = (props) => {
     return (
         <NavigationContainer>
-            <AppNavigation/>
+            <AuthNavigation/>
         </NavigationContainer>
     );
 };
