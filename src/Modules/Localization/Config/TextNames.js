@@ -1,4 +1,5 @@
-export const Texts = {
+//text names
+export const tn = {
     //Sample
     hello: 'hello',
     //Authorization Screen
@@ -9,7 +10,7 @@ export const Texts = {
     username: 'username',
     //Home Screen
     home: 'home',
-    //Adding New Screen
+    //Adding New Screen & Edit Screen
     addNew: 'addNew',
     routineName: 'routineName',
     startDate: 'startDate',
@@ -17,7 +18,6 @@ export const Texts = {
     routines: 'routines',
     add: 'add',
     today: 'today',
-    //Edit Screen
     edit: 'edit',
     save: 'save',
     //Settings Screen
