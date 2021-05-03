@@ -25,9 +25,10 @@ const styles = (Colors) => StyleSheet.create({
         justifyContent: 'center',
     },
     appLogoContainer: {
-        flex: 0.75,
+        flex: 0.8,
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: 50,
     },
     inputsContainer: {
         minHeight: Metrics.width * 0.5,
@@ -55,7 +56,7 @@ const styles = (Colors) => StyleSheet.create({
         backgroundColor: Colors[cn.auth.paleButtonBackground],
     },
     signupText: {
-        fontFamily: Fonts.type.bold,
+        fontFamily: Fonts.type.regular,
         fontSize: Fonts.size(18),
         color: Colors[cn.auth.paleButtonText],
     },

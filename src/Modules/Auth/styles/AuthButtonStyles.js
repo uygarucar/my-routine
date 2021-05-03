@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {Fonts} from '../../../StylingConstants';
+import { StyleSheet } from 'react-native';
+import { Fonts } from '../../../StylingConstants';
 import { cn } from '../../Theming';
 
 const styles = (Colors) => StyleSheet.create({
@@ -13,6 +13,13 @@ const styles = (Colors) => StyleSheet.create({
         fontSize: Fonts.size(18),
         color: Colors[cn.auth.coloredButtonText],
     },
+
+
+
+
+
+
+
 });
 
 export default styles;
