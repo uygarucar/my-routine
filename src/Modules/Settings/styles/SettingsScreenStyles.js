@@ -33,6 +33,7 @@ export default Colors => StyleSheet.create({
         borderWidth: 2,
         borderColor: Colors[cn.settings.signOutButtonBorder],
         backgroundColor: Colors[cn.settings.signOutButtonBackground],
+
     },
     signOutText: {
         fontSize: Fonts.size(18),

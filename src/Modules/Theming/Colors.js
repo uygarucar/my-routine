@@ -116,9 +116,9 @@ export const lightColors = {
 	[settings.radioButtonUnselectedIcon]: constantColors.greys[1],
 	[settings.radioButtonSelectedIcon]: constantColors.blues[2],
 	[settings.radioButtonText]: constantColors.black,
-	[settings.signOutButtonBackground]: constantColors.transparent,
+	[settings.signOutButtonBackground]: constantColors.mainColor1,
 	[settings.signOutButtonBorder]: constantColors.blues[2],
-	[settings.signOutButtonText]: constantColors.black,
+	[settings.signOutButtonText]: constantColors.white,
 	//header
 	[header.background]: constantColors.mainColor1,
     [header.text]: constantColors.white,
@@ -148,8 +148,8 @@ export const darkColors = {
 	[home.addButtonBackground]: constantColors.blues[2],
 	//settings
 	[settings.background]: constantColors.greys[3],
-	[settings.usernameText]: constantColors.white,
-	[settings.userEmailText]: constantColors.white,
+	[settings.usernameText]: constantColors.greys[6],
+	[settings.userEmailText]: constantColors.greys[6],
 	[settings.titleText]: constantColors.blues[4],
 	[settings.radioButtonUnselectedIcon]: constantColors.greys[1],
 	[settings.radioButtonSelectedIcon]: constantColors.blues[4],
@@ -159,8 +159,8 @@ export const darkColors = {
 	[settings.signOutButtonText]: constantColors.greys[6],
 	//header
 	[header.background]: constantColors.mainColor2,
-    [header.text]: constantColors.white,
-    [header.backIcon]: constantColors.white,
+    [header.text]: constantColors.greys[6],
+    [header.backIcon]: constantColors.greys[6],
     [header.rightIcon]: constantColors.white,
 	
 };

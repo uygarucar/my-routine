@@ -9,7 +9,6 @@ import { isValidEmail } from '../Utils/AuthValidations';
 
 const AuthScreen = props => {
 
-    const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirm, setPasswordConfirm] = useState('');
@@ -18,10 +17,6 @@ const AuthScreen = props => {
     const dispatch = useDispatch();
 
     const _onPress_SignUp = () => {
-        console.log("Username", name);
-        console.log("Email", email);
-        console.log("Password", password);
-
         if (email.length === 0 || password.length === 0 || name.length === 0) {
             Alert.alert('Uyarı', 'Lütfen tüm alanları doldurun.');
         }
@@ -34,14 +29,7 @@ const AuthScreen = props => {
          
     }
 
-    const _onPress_SignIn = () => {
-
-        // if (password == 1234 & email == 'admin') {
-        //     dispatch(setUserAC(true))
-        // }
-        // console.log("Email", email);
-        // console.log("Password", password);
-        
+    const _onPress_SignIn = () => {        
         if (email.length === 0 || password.length === 0) {
             Alert.alert('Uyarı', 'Lütfen tüm alanları doldurun.');
         }
