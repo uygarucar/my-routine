@@ -10,7 +10,8 @@
  import React from 'react';
  import { Provider } from 'react-redux';
  import { PersistGate } from 'redux-persist/integration/react';
- 
+ import { LoadingManager} from './Modules/Loading';
+
  import createStore from './Redux/CreateStore';
  import MainNavigation from './Modules/Navigation/MainNavigation';
  
@@ -22,6 +23,7 @@
    return (
      <Provider store={store}>
        <PersistGate loading={null} persistor={persistor}>
+          <LoadingManager/>
          <MainNavigation />
        </PersistGate>
      </Provider>

@@ -1,12 +1,11 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import AuthScreenUI from './AuthScreenUI';
-// import { signIn, signUp } from '../../Redux/AuthRedux';
 import { Alert, View, Text } from 'react-native';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signInRequest, signUpRequest, setUserAC } from '../Redux/UserRedux';
 import { isValidEmail } from '../Utils/AuthValidations';
+
 
 const AuthScreen = props => {
 
@@ -23,34 +22,33 @@ const AuthScreen = props => {
         console.log("Email", email);
         console.log("Password", password);
 
-        /*
-         if (email.length === 0 || password.length === 0 || name.length === 0) {
-             Alert.alert('Uyarı', 'Lütfen tüm alanları doldurun.');
-         }
-         else if (!isValidEmail(email)) {
-             Alert.alert('Uyarı', 'Lütfen e-posta adresinizi kontrol edin.');
-         }
-         else {
-             dispatch(signUpRequest(email, password, name));
-         }
-         */
+        if (email.length === 0 || password.length === 0 || name.length === 0) {
+            Alert.alert('Uyarı', 'Lütfen tüm alanları doldurun.');
+        }
+        else if (!isValidEmail(email)) {
+            Alert.alert('Uyarı', 'Lütfen e-posta adresinizi kontrol edin.');
+        }
+        else {
+            dispatch(signUpRequest(email, password, name));
+        }
+         
     }
 
     const _onPress_SignIn = () => {
 
-        if (password == 1234 & email == 'admin') {
-            dispatch(setUserAC(true))
-        }
-        console.log("Email", email);
-        console.log("Password", password);
-        /*
+        // if (password == 1234 & email == 'admin') {
+        //     dispatch(setUserAC(true))
+        // }
+        // console.log("Email", email);
+        // console.log("Password", password);
+        
         if (email.length === 0 || password.length === 0) {
             Alert.alert('Uyarı', 'Lütfen tüm alanları doldurun.');
         }
         else {
             dispatch(signInRequest(email, password))
         }
-        */
+     
     }
 
     return (

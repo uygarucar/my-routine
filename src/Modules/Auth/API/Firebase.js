@@ -1,5 +1,3 @@
-/*
-
 import createFBAuth from "@react-native-firebase/auth";
 
 const auth = createFBAuth();
@@ -32,5 +30,3 @@ export const getCurrentUser = () => {
 export const getCurrentUserId = () => {
     return auth.currentUser.uid;
 }
-
-*/

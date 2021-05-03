@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View } from 'react-native';
 
 import Icon from '../../../Components/Icon';
 import  {Svgs} from '../../../StylingConstants'
-import { cn, useThemedColors, useThemedStyles, useThemedValues } from '../../Theming';
+import { cn, useThemedColors } from '../../Theming';
 
 import getStyles from '../styles/OptionMenuStyles';
 
