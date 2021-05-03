@@ -19,7 +19,7 @@ const AppNavigation = props => {
     const loc = useLocalization();
     return (
         <AppStack.Navigator>
-            <AppStack.Screen
+            {/* <AppStack.Screen
                 name="homepage-screen"
                 component={HomeScreen}
                 o options={{
@@ -39,7 +39,7 @@ const AppNavigation = props => {
                     },
                     headerTintColor: colors[cn.header.backIcon]
                 }}
-            />
+            /> */ }
             <AppStack.Screen
                 name="setting-screen"
                 component={SettingsScreen}
