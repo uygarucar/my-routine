@@ -8,6 +8,7 @@ const styles = (Colors) => StyleSheet.create({
         paddingHorizontal: Metrics.textMargin,
         backgroundColor: Colors[cn.auth.inputBackground],
     },
+
     input: {
         flex:1,
         fontSize: Fonts.size(18),

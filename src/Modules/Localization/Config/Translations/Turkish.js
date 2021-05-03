@@ -6,7 +6,7 @@ export default {
     //Authorization Screen
     [tn.email]: 'E-posta',
     [tn.password]: 'Şifre',
-    [tn.login]: 'GİRİŞ YAP',
+    [tn.login]: 'Giriş Yap',
     [tn.signUp]: 'Kayıt Ol',
     [tn.username]: 'Kullanıcı Adı',
     //Home Screen

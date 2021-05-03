@@ -58,14 +58,14 @@ const AuthScreen = props => {
                                 </View>
                         }
                         <View style={styles.inputContainer}>
-                            <AuthInput
+                            <AuthInput 
                                 value={props.emailValue}
                                 onChangeText={props.onChangeText_Email}
                                 autoCapitalize={'none'}
                                 placeholder={loc.t(tn.email)} />
                         </View>
                         <View style={styles.inputContainer}>
-                            <AuthInput
+                            <AuthInput 
                                 value={props.passwordValue}
                                 onChangeText={props.onChangeText_Password}
                                 autoCapitalize={'none'}
