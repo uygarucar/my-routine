@@ -10,8 +10,16 @@ export default Colors => StyleSheet.create({
     },
 
     routineText: {
+        flex:0.08,
+        fontSize: Fonts.size(16),
         fontFamily: Fonts.type.regular,
-        padding: 5,
+        marginHorizontal: 10,
+        marginVertical: 10,
+        borderRadius: 4,
+        backgroundColor: 'lightgrey',
+        alignItems: "center",
+        paddingHorizontal: 20,
+        
     },
     
 });

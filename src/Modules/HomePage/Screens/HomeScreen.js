@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useDispatchChangeTheme, useTheme, useThemedColors, useThemeOptions } from '../../Theming';
 import { useLocalization, tn, useLocaleOptions, useLocale, useDispatchChangeLocale } from '../../Localization';
 import  {Svgs} from '../../../StylingConstants';
@@ -34,13 +34,10 @@ const HomeScreen = props => {
     return (
         <View style={styles.container}>
             <SafeAreaView style={{ flex: 1 }}>
-                <Text style={styles.routineText}>Sabah</Text>
-                <Text style={styles.routineText}>İsten dönerken</Text>
-                <Text style={styles.routineText}>Sabah</Text>
-                <Text style={styles.routineText}>İsten dönerken</Text>
+                <TextInput style={styles.routineText}></TextInput>
+                <TextInput style={styles.routineText}></TextInput>
                 <View style={styles.menusContainer}>
                 </View>
-                
             </SafeAreaView>
         </View>
 
