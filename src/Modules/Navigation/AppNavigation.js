@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import SettingsScreen from '../Settings/Screens/SettingsScreen';
 import AuthScreen from '../Auth/Screens/AuthScreen';
-import MainScreen from '../Main/Screens/MainScreen'
+import HomeScreen from '../HomePage/Screens/HomeScreen'
 
 
 import { cn, useThemedColors } from '../Theming';
@@ -20,10 +20,24 @@ const AppNavigation = props => {
     return (
         <AppStack.Navigator>
             <AppStack.Screen
-                name="main-screen"
-                component={MainScreen}
-                options={{
-                    title:'Anasayfa'
+                name="homepage-screen"
+                component={HomeScreen}
+                o options={{
+                    title: 'ANASAYFA',
+                    headerStyle: {
+                        backgroundColor: colors[cn.header.background],
+                    },
+                    headerTitleAlign: 'center',
+                    headerTitleStyle: {
+                        fontFamily: Fonts.type.bold,
+                        fontSize: Fonts.size(18),
+                        color: colors[cn.header.text],
+                    },
+                    headerBackTitleVisible: false,
+                    headerLeftContainerStyle: {
+                        marginLeft: Metrics.marginHorizontal * 0.1,
+                    },
+                    headerTintColor: colors[cn.header.backIcon]
                 }}
             />
             <AppStack.Screen
