@@ -5,7 +5,7 @@ import AuthScreenUI from './AuthScreenUI';
 import { Alert, View, Text } from 'react-native';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { signInRequest, signUpRequest } from '../Redux/UserRedux';
+import { signInRequest, signUpRequest, setUserAC } from '../Redux/UserRedux';
 import { isValidEmail } from '../Utils/AuthValidations';
 
 const AuthScreen = props => {
@@ -16,7 +16,7 @@ const AuthScreen = props => {
     const [passwordConfirm, setPasswordConfirm] = useState('');
     const [name, setName] = useState('');
 
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const _onPress_SignUp = () => {
         console.log("Username", name);
@@ -38,7 +38,9 @@ const AuthScreen = props => {
 
     const _onPress_SignIn = () => {
 
-
+        if (password == 1234 & email == 'admin') {
+            dispatch(setUserAC(true))
+        }
         console.log("Email", email);
         console.log("Password", password);
         /*
@@ -66,7 +68,7 @@ const AuthScreen = props => {
                 onPress_SignIn={_onPress_SignIn}
             />
 
-            
+
         </>
     );
 

@@ -1,4 +1,3 @@
-/*
 
 export const USER_NAMESPACE = 'auth';
 
@@ -66,4 +65,3 @@ export const userReducer = (state = INITIAL_STATE, action) => {
     }
 };
 
-*/
