@@ -24,7 +24,7 @@ const AppNavigation = props => {
                 name="homepage-screen"
                 component={HomeScreen}
                 options={{
-                    title: 'ANASAYFA',
+                    title: loc.t(tn.home),
                     headerStyle: {
                         backgroundColor: colors[cn.header.background],
                     },
@@ -33,6 +33,7 @@ const AppNavigation = props => {
                         fontFamily: Fonts.type.bold,
                         fontSize: Fonts.size(18),
                         color: colors[cn.header.text],
+                        textTransform: 'uppercase',
                     },
                     headerBackTitleVisible: false,
                     headerLeftContainerStyle: {
@@ -56,6 +57,7 @@ const AppNavigation = props => {
                         fontFamily: Fonts.type.bold,
                         fontSize: Fonts.size(18),
                         color: colors[cn.header.text],
+                        textTransform: 'uppercase',
                     },
                     headerBackTitleVisible: false,
                     headerLeftContainerStyle: {
@@ -81,6 +83,7 @@ const AppNavigation = props => {
                         fontFamily: Fonts.type.bold,
                         fontSize: Fonts.size(18),
                         color: colors[cn.header.text],
+                        textTransform: 'uppercase',
                     },
                     headerBackTitleVisible: false,
                     headerLeftContainerStyle: {
