@@ -18,6 +18,7 @@ import {Images} from '../../../StylingConstants';
 import getStyles from '../styles/AuthScreenStyles';
 import { useThemedStyles } from '../../Theming';
 import { tn, useLocalization, useLocale } from '../../Localization';
+import { customUppercase } from '../../../Utils/LocaleUpperCase';
 
 const AuthScreen = props => {
 
@@ -27,8 +28,8 @@ const AuthScreen = props => {
     const loc = useLocalization();
 
     const locale = useLocale();
-    const loginUppercase = loc.t(tn.login).toLocaleUpperCase(locale);
-    const signupUppercase = loc.t(tn.signUp).toLocaleUpperCase(locale);
+    const loginUppercase = customUppercase(loc.t(tn.login), locale);
+    const signupUppercase = customUppercase(loc.t(tn.signUp), locale);
 
     return (
         <SafeAreaView style={styles.safeArea}>
