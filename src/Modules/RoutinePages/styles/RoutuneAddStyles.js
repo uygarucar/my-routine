@@ -14,16 +14,40 @@ export default Colors=> StyleSheet.create({
         // flexShrink:1,
      
     },
+    // textInput:{
+    //     fontSize: Fonts.size(16),
+    //     fontFamily: Fonts.type.regular,
+    //     borderRadius: Metrics.borderRadiusStandard,
+    //     paddingHorizontal:Metrics.textMargin,
+    //     borderColor: Colors[cn.home.routinesBorder],
+    //     borderWidth: Metrics.borderWidth,
+    //     color:Colors[cn.home.routinesText],
+    //     marginBottom:Metrics.marginBottomTextinput,
+    //     // alignItems: "center",
+
+    // },
+ 
+    ViewInput:{
+        fontSize: Fonts.size(16),
+        fontFamily: Fonts.type.regular,
+        borderRadius: Metrics.borderRadiusStandard,
+        borderColor: Colors[cn.home.routinesBorder],
+        borderWidth: Metrics.borderWidth,
+        color:Colors[cn.home.routinesText],
+        marginBottom:Metrics.marginBottomTextinput,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:"space-between",
+
+    },
     textInput:{
         fontSize: Fonts.size(16),
         fontFamily: Fonts.type.regular,
         borderRadius: Metrics.borderRadiusStandard,
         paddingHorizontal:Metrics.textMargin,
-        borderColor: Colors[cn.home.routinesBorder],
-        borderWidth: Metrics.borderWidth,
         color:Colors[cn.home.routinesText],
-        marginBottom:Metrics.marginBottomTextinput,
         // alignItems: "center",
+        flexGrow:1
 
     },
     RoutineInput:{
@@ -44,5 +68,12 @@ export default Colors=> StyleSheet.create({
     addText: {
         fontSize: Fonts.size(18),
         color: Colors[cn.settings.signOutButtonText],
-    }
+    },
+    today: {
+        width: Metrics.width * 0.15,
+        marginRight:Metrics.width*0.015,
+        color:Colors[cn.auth.background],
+        fontSize:Fonts.size(20),
+
+   }
 });

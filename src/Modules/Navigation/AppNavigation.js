@@ -64,7 +64,8 @@ const AppNavigation = props => {
                         marginLeft: Metrics.marginHorizontal * 0.1,
                     },
                     headerTintColor: colors[cn.header.backIcon],
-                    headerRight: SettingsIcon
+                    headerRight: SettingsIcon,
+                    headerLeft: ()=> null,
 
                 }}
             />

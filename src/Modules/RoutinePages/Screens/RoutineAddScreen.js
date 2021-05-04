@@ -11,49 +11,66 @@ import { cn, useThemedValues } from '../../Theming';
 
 const RoutineAddScreen = props => {
 
-    const loc = useLocalization();    
-    const themedColors=useThemedColors();
-    const styles=getStyles(themedColors);
+    const loc = useLocalization();
+    const themedColors = useThemedColors();
+    const styles = getStyles(themedColors);
     const navigation = useNavigation();
 
-    const _onPress_add=()=>{
+    const _onPress_add = () => {
 
     };
 
     return (
         <View style={styles.container}>
-             <SafeAreaView style={{ flex: 1 }}>
-             <View style={styles.RoutineContainer}>
-                <TextInput
-                style={styles.textInput}
-                placeholder={loc.t(tn.routineName)}
-                placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
-                numberOfLines={1}
-                ></TextInput>
-                 <TextInput
-                style={styles.textInput}
-                placeholder={loc.t(tn.startDate)}
-                placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
-                >
-                   
-                </TextInput>
-                 <TextInput
-                style={styles.textInput}
-                placeholder={loc.t(tn.endDate)}
-                placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
-                ></TextInput>
-                <TextInput
-                style={[styles.RoutineInput,styles.textInput]}
-                placeholder={loc.t(tn.routines)}
-                placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
-                multiline
-                ></TextInput>
+            <SafeAreaView style={{ flex: 1 }}>
+                <View style={styles.RoutineContainer}>
+                <View style={styles.ViewInput}>
+
+                    <TextInput
+                        style={styles.textInput}
+                        placeholder={loc.t(tn.routineName)}
+                        placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
+                        numberOfLines={1}
+                    ></TextInput>
+                    </View>
+                    <View style={styles.ViewInput}>
+
+                    <TextInput
+                        style={styles.textInput}
+                        placeholder={loc.t(tn.startDate)}
+                        placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
+                    >
+
+                    </TextInput>
+                    <TouchableOpacity style={styles.today} >
+                            <Text>{loc.t(tn.today)}</Text>
+                        </TouchableOpacity>
+
+                    </View>
+                    <View style={styles.ViewInput}>
+
+                    <TextInput
+                        style={styles.textInput}
+                        placeholder={loc.t(tn.endDate)}
+                        placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
+                    ></TextInput>
+                    </View>
+                    <View style={styles.ViewInput}>
+
+                    <TextInput
+                        style={[styles.RoutineInput, styles.textInput]}
+                        placeholder={loc.t(tn.routines)}
+                        placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
+                        multiline
+                    ></TextInput>
+                    </View>
+
                 </View>
                 <TouchableOpacity style={styles.addTouchable} onPress={_onPress_add}>
                     <Text style={styles.addText}>{loc.t(tn.add)}</Text>
                 </TouchableOpacity>
             </SafeAreaView>
-            
+
         </View>
     );
 };
