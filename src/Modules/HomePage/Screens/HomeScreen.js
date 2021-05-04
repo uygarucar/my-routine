@@ -4,8 +4,8 @@ import { useDispatchChangeTheme, useTheme, useThemedColors, useThemeOptions } fr
 import { useLocalization, tn, useLocaleOptions, useLocale, useDispatchChangeLocale } from '../../Localization';
 import { Svgs } from '../../../StylingConstants';
 import getStyles from '../styles/HomeScreenStyles';
-import HomePage from '../Components/HomePage';
 import Modal from 'react-native-modal';
+import Icon from '../../../Components/Icon';
 
 
 
@@ -41,8 +41,9 @@ const HomeScreen = props => {
                     <Text style={styles.inputText}  
                 underlineColorAndroid='transparent'></Text>
                 </TouchableOpacity>
-
-                <View style={styles.buttonContainer}>
+                
+                <View style={styles.buttonContainer}> 
+                    <Icon svg={Svgs.Addbutton} iconStyle={{color:'blue'}}></Icon>
                 </View>
             </SafeAreaView>
         </View>

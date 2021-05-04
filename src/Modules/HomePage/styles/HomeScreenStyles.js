@@ -20,5 +20,9 @@ export default Colors => StyleSheet.create({
         color:Colors[cn.home.routinesText],
         marginBottom:Metrics.marginBottomTextinput,
     },
+    buttonContainer:{
+        width:20,
+        /// burası ikon ile ilgili yer 
+    }
 
 });

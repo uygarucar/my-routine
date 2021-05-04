@@ -105,7 +105,7 @@ export const lightColors = {
 	//home
 	[home.background]: constantColors.white,
 	[home.routinesText]: constantColors.black,
-	[home.routinesBorder]: constantColors.greys[4],
+	[home.routinesBorder]: constantColors.greys[2],
 	[home.routinesBackground]: constantColors.transparent,
 	[home.addButtonBackground]: constantColors.blues[2],
 	//settings
@@ -142,7 +142,7 @@ export const darkColors = {
     [auth.appNameText]: constantColors.white,
 	//home
 	[home.background]: constantColors.greys[3],
-	[home.routinesText]: constantColors.black,
+	[home.routinesText]: constantColors.greys[6],
 	[home.routinesBorder]: constantColors.greys[4],
 	[home.routinesBackground]: constantColors.transparent,
 	[home.addButtonBackground]: constantColors.blues[2],
