@@ -42,7 +42,7 @@ const AppNavigation = props => {
                     headerRight: SettingsIcon
                 }}
             />
-            <AppStack.Screen
+          {/*  <AppStack.Screen
                 name="routineAdd-screen"
                 component={RoutineAdd}
                 options={{
@@ -63,6 +63,7 @@ const AppNavigation = props => {
                     headerTintColor: colors[cn.header.backIcon]
                 }}
             />
+            */}
 
             <AppStack.Screen
                 name="setting-screen"

@@ -5,6 +5,8 @@ import { useLocalization, tn, useLocaleOptions, useLocale, useDispatchChangeLoca
 import { Svgs } from '../../../StylingConstants';
 import getStyles from '../styles/HomeScreenStyles';
 import HomePage from '../Components/HomePage';
+import Modal from 'react-native-modal';
+
 
 
 const HomeScreen = props => {
@@ -30,19 +32,25 @@ const HomeScreen = props => {
     }
 
 
+    
 
     return (
         <View style={styles.container}>
             <SafeAreaView style={{ flex: 1 }}>
-                <TextInput style={styles.inputText}
-                    underlineColorAndroid='#FFF'
-                    InputProps={{ disableUnderline: true }}
-                ></TextInput>
-                <TextInput style={styles.inputText}></TextInput>
-                <View style={styles.menusContainer}>
+            <TouchableOpacity style={styles.touchButton}>
+                    <Text style={styles.inputText}  
+                underlineColorAndroid='transparent'></Text>
+                </TouchableOpacity>
+
+                <View style={styles.buttonContainer}>
                 </View>
             </SafeAreaView>
         </View>
+
+        
+        
+
+        
 
 
     );

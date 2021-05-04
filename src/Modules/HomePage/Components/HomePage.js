@@ -28,13 +28,21 @@ const HomePage = props => {
 
     return (
 
+        <>
+
         <View style={styles.container}>
             <Text style={styles.titleText}>{props.menuTitle}</Text>
             {renderHomePage}
         </View>
+        <SafeAreaView style={styles.container}>
+            <View style={styles.addbuttonTouchable} onPress={_onPress_AddRoutine}>
+                <Icon svg={Svgs.addbutton} iconStyle={{color: 'blue'}} />
+            </View>
+
+        </SafeAreaView>
 
         
-        
+        </>
     );
 
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from '../../Components/Icon';
 import { cn, useThemedStyles } from '../../Modules/Theming';
-import { Metrics, Svgs } from '../../StylingConstants';
+import { Metrics, Svgs } from '../../StylingConstants/';
 
 const getStyles = Color => StyleSheet.create({
     iconContainer: {

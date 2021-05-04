@@ -9,18 +9,16 @@ export default Colors => StyleSheet.create({
         padding: Metrics.marginHorizontal,
     },
 
-    inputText: {
+    inputText:{
         fontSize: Fonts.size(16),
         fontFamily: Fonts.type.regular,
-        marginHorizontal: 10,
-        marginVertical: 10,
-        borderRadius: 4,
+        borderRadius: Metrics.borderRadiusStandard,
+        paddingHorizontal:Metrics.textMargin,
         alignItems: "center",
-        paddingHorizontal: 20,
-        borderColor: 'black',
-        borderWidth: 1,
-
-
+        borderColor: Colors[cn.home.routinesBorder],
+        borderWidth: Metrics.borderWidth,
+        color:Colors[cn.home.routinesText],
+        marginBottom:Metrics.marginBottomTextinput,
     },
 
 });
