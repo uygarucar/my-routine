@@ -34,14 +34,16 @@ const RoutineAddScreen = props => {
                 style={styles.textInput}
                 placeholder={loc.t(tn.startDate)}
                 placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
-                ></TextInput>
+                >
+                   
+                </TextInput>
                  <TextInput
                 style={styles.textInput}
                 placeholder={loc.t(tn.endDate)}
                 placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
                 ></TextInput>
                 <TextInput
-                style={styles.RoutineInput}
+                style={[styles.RoutineInput,styles.textInput]}
                 placeholder={loc.t(tn.routines)}
                 placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
                 multiline

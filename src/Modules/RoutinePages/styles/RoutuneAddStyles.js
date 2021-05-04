@@ -11,6 +11,7 @@ export default Colors=> StyleSheet.create({
     },
     RoutineContainer: {
         flexGrow: 1,
+        // flexShrink:1,
      
     },
     textInput:{
@@ -18,24 +19,17 @@ export default Colors=> StyleSheet.create({
         fontFamily: Fonts.type.regular,
         borderRadius: Metrics.borderRadiusStandard,
         paddingHorizontal:Metrics.textMargin,
-        alignItems: "center",
         borderColor: Colors[cn.home.routinesBorder],
         borderWidth: Metrics.borderWidth,
         color:Colors[cn.home.routinesText],
         marginBottom:Metrics.marginBottomTextinput,
+        // alignItems: "center",
+
     },
     RoutineInput:{
-        fontSize: Fonts.size(16),
-        fontFamily: Fonts.type.regular,
-        borderRadius: Metrics.borderRadiusStandard,
-        paddingHorizontal:Metrics.textMargin,
-        textAlignVertical:"top",
-        borderColor: Colors[cn.home.routinesBorder],
-        borderWidth: Metrics.borderWidth,
-        color:Colors[cn.home.routinesText],
-        marginBottom:Metrics.marginBottomTextinput,
         minHeight:Metrics.width*0.5,
-
+        textAlignVertical:"top",
+        maxHeight:Metrics.width*0.8,
     },
     addTouchable: {
         height: Metrics.boxNormalHeight,
