@@ -82,12 +82,17 @@ const header = {
 		backIcon: 'header/backIcon',
 		rightIcon: 'header/rightIcon'
 }
-
+const modal = {
+	title: 'modal/title',
+	modalBorder:'modal/modalBorder',
+	routinesBorder: 'modal/routinesBorder'
+}
 export const cn={
 	auth,
 	settings,
 	header,
-	home
+	home,
+	modal
 }
 
 export const lightColors = {
@@ -124,7 +129,10 @@ export const lightColors = {
     [header.text]: constantColors.white,
     [header.backIcon]: constantColors.white,
     [header.rightIcon]: constantColors.white,
-	
+	//modal
+	[modal.title]: constantColors.blues[1],
+	[modal.modalBorder]: constantColors.greys[4],
+	[modal.routinesBorder]: constantColors.greys[4],
 };
 
 
@@ -162,6 +170,9 @@ export const darkColors = {
     [header.text]: constantColors.greys[6],
     [header.backIcon]: constantColors.greys[6],
     [header.rightIcon]: constantColors.white,
-	
+	//modal
+	[modal.title]: constantColors.blues[1],
+	[modal.modalBorder]: constantColors.greys[4],
+	[modal.routinesBorder]: constantColors.greys[4],
 };
 
