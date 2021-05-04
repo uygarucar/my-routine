@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { useDispatchChangeTheme, useTheme, useThemedColors, useThemeOptions } from '../../Theming';
+import { cn, useDispatchChangeTheme, useTheme, useThemedColors, useThemeOptions } from '../../Theming';
 import { useLocalization, tn, useLocaleOptions, useLocale, useDispatchChangeLocale } from '../../Localization';
 import { Svgs } from '../../../StylingConstants';
 import getStyles from '../styles/HomeScreenStyles';
@@ -36,7 +36,6 @@ const HomeScreen = props => {
 
 
 
-
     return (
         <View style={styles.container}>
             <SafeAreaView style={{ flex: 1 }}>
@@ -48,7 +47,7 @@ const HomeScreen = props => {
 
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.addbuttonTouchable} onPress={() => props.navigation.navigate('routineAdd-screen')} >
-                        <Icon svg={Svgs.Addbutton} iconStyle={{ color: '#433591' }}></Icon>
+                        <Icon svg={Svgs.Addbutton} iconStyle={{ color: themedColors[cn.header.background]}}></Icon>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
