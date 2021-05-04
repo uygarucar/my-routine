@@ -32,26 +32,30 @@ const HomeScreen = props => {
     }
 
 
-    
+
 
     return (
         <View style={styles.container}>
             <SafeAreaView style={{ flex: 1 }}>
-            <TouchableOpacity style={styles.touchButton}>
-                    <Text style={styles.inputText}  
-                underlineColorAndroid='transparent'></Text>
-                </TouchableOpacity>
-                
-                <View style={styles.buttonContainer}> 
-                    <Icon svg={Svgs.Addbutton} iconStyle={{color:'blue'}}></Icon>
+                <View style={styles.textContainer}>
+                    <TouchableOpacity style={styles.touchButton}>
+                        <Text style={styles.inputText}
+                            underlineColorAndroid='transparent'></Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={styles.buttonContainer}>
+                    <TouchableOpacity style={styles.addbuttonTouchable}>
+                        <Icon svg={Svgs.Addbutton} iconStyle={{ color: '#433591' }}></Icon>
+                    </TouchableOpacity>
                 </View>
             </SafeAreaView>
         </View>
 
-        
-        
 
-        
+
+
+
 
 
     );

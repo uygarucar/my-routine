@@ -19,10 +19,23 @@ export default Colors => StyleSheet.create({
         borderWidth: Metrics.borderWidth,
         color:Colors[cn.home.routinesText],
         marginBottom:Metrics.marginBottomTextinput,
+        paddingVertical:10,
+        marginTop:10,
     },
-    buttonContainer:{
-        width:20,
-        /// burası ikon ile ilgili yer 
-    }
 
-});
+    buttonContainer:{
+        flex:1,
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+     
+     },
+
+     addbuttonTouchable:{
+        width: Metrics.width * 0.20,
+        height: undefined,
+        aspectRatio: 1,
+        padding: Metrics.width * 0.02,
+       
+     },
+
+ })
