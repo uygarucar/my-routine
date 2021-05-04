@@ -15,13 +15,20 @@ const RoutineAddScreen = props => {
     const themedColors=useThemedColors();
     const styles=getStyles(themedColors);
     const navigation = useNavigation();
+
+    const _onPress_add=()=>{
+
+    };
+
     return (
         <View style={styles.container}>
              <SafeAreaView style={{ flex: 1 }}>
+             <View style={styles.RoutineContainer}>
                 <TextInput
                 style={styles.textInput}
                 placeholder={loc.t(tn.routineName)}
                 placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
+                numberOfLines={1}
                 ></TextInput>
                  <TextInput
                 style={styles.textInput}
@@ -33,10 +40,15 @@ const RoutineAddScreen = props => {
                 placeholder={loc.t(tn.endDate)}
                 placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
                 ></TextInput>
-                <TouchableOpacity onPress={()=>navigation.navigate("setting-screen")}>
-                    <Text>
-                        ayarlara git
-                    </Text>
+                <TextInput
+                style={styles.RoutineInput}
+                placeholder={loc.t(tn.routines)}
+                placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
+                multiline
+                ></TextInput>
+                </View>
+                <TouchableOpacity style={styles.addTouchable} onPress={_onPress_add}>
+                    <Text style={styles.addText}>{loc.t(tn.add)}</Text>
                 </TouchableOpacity>
             </SafeAreaView>
             
