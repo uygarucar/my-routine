@@ -72,8 +72,11 @@ export default Colors=> StyleSheet.create({
     today: {
         width: Metrics.width * 0.15,
         marginRight:Metrics.width*0.015,
-        color:Colors[cn.auth.background],
-        fontSize:Fonts.size(20),
+        
+   },
+   todayText:{
+    color:Colors[cn.auth.background],
+    fontWeight:'bold',
 
    }
 });

@@ -43,7 +43,7 @@ const RoutineAddScreen = props => {
 
                     </TextInput>
                     <TouchableOpacity style={styles.today} >
-                            <Text>{loc.t(tn.today)}</Text>
+                            <Text style={styles.todayText}>{loc.t(tn.today)}</Text>
                         </TouchableOpacity>
 
                     </View>
