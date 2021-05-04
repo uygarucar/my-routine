@@ -7,7 +7,7 @@ import SettingsScreen from '../Settings/Screens/SettingsScreen';
 import AuthScreen from '../Auth/Screens/AuthScreen';
 import HomeScreen from '../HomePage/Screens/HomeScreen';
 import RoutineAdd from '../RoutinePages/Screens/RoutineAddScreen';
-
+import SettingsIcon from './SettingsIcon'
 
 import { cn, useThemedColors } from '../Theming';
 import { useLocalization, tn } from '../Localization';
@@ -20,10 +20,10 @@ const AppNavigation = props => {
     const loc = useLocalization();
     return (
         <AppStack.Navigator>
-             {/* <AppStack.Screen
+            <AppStack.Screen
                 name="homepage-screen"
                 component={HomeScreen}
-                o options={{
+                options={{
                     title: 'ANASAYFA',
                     headerStyle: {
                         backgroundColor: colors[cn.header.background],
@@ -38,10 +38,11 @@ const AppNavigation = props => {
                     headerLeftContainerStyle: {
                         marginLeft: Metrics.marginHorizontal * 0.1,
                     },
-                    headerTintColor: colors[cn.header.backIcon]
+                    headerTintColor: colors[cn.header.backIcon],
+                    headerRight: SettingsIcon
                 }}
-            />  */}
-             <AppStack.Screen
+            />
+            <AppStack.Screen
                 name="routineAdd-screen"
                 component={RoutineAdd}
                 options={{
@@ -61,7 +62,7 @@ const AppNavigation = props => {
                     },
                     headerTintColor: colors[cn.header.backIcon]
                 }}
-                />
+            />
 
             <AppStack.Screen
                 name="setting-screen"
