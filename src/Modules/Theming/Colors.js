@@ -134,7 +134,7 @@ export const darkColors = {
     [auth.inputBorder]: constantColors.white,
     [auth.inputBackground]: toRGBA(constantColors.white, 20),
     [auth.inputText]: toRGBA(constantColors.white, 79),
-    [auth.inputPlaceholder]: toRGBA(constantColors.greys[3], 40),
+    [auth.inputPlaceholder]: toRGBA(constantColors.white, 35),
     [auth.coloredButtonBackground]: constantColors.white,
     [auth.coloredButtonText]: constantColors.blues[3],
     [auth.paleButtonBackground]: constantColors.transparent,

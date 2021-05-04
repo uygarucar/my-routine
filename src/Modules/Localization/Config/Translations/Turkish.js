@@ -13,7 +13,7 @@ export default {
     [tn.home]: 'Anasayfa',
     //Adding New Screen & Edit Screen
     [tn.addNew]: 'Yeni Ekle',
-    [tn.routineName]: 'Rutin İsmi',
+    [tn.routineName]: 'Rutin Adı',
     [tn.startDate]: 'Başlangıç Tarihi',
     [tn.endDate]: 'Bitiş Tarihi',
     [tn.routines]: 'Rutinler',
@@ -21,6 +21,7 @@ export default {
     [tn.today]: 'Bugün',
     [tn.edit]: 'Düzenle',
     [tn.save]: 'Kaydet',
+ 
     //Settings Screen
     [tn.settings]: 'Ayarlar',
     [tn.colorTheme]: 'Renk Teması',

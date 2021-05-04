@@ -5,7 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import SettingsScreen from '../Settings/Screens/SettingsScreen';
 import AuthScreen from '../Auth/Screens/AuthScreen';
-import HomeScreen from '../HomePage/Screens/HomeScreen'
+import HomeScreen from '../HomePage/Screens/HomeScreen';
+import RoutineAdd from '../RoutinePages/Screens/RoutineAddScreen';
 
 
 import { cn, useThemedColors } from '../Theming';
@@ -19,7 +20,7 @@ const AppNavigation = props => {
     const loc = useLocalization();
     return (
         <AppStack.Navigator>
-             <AppStack.Screen
+             {/* <AppStack.Screen
                 name="homepage-screen"
                 component={HomeScreen}
                 o options={{
@@ -39,7 +40,29 @@ const AppNavigation = props => {
                     },
                     headerTintColor: colors[cn.header.backIcon]
                 }}
-            /> 
+            />  */}
+             <AppStack.Screen
+                name="routineAdd-screen"
+                component={RoutineAdd}
+                options={{
+                    title: loc.t(tn.addNew),
+                    headerStyle: {
+                        backgroundColor: colors[cn.header.background],
+                    },
+                    headerTitleAlign: 'center',
+                    headerTitleStyle: {
+                        fontFamily: Fonts.type.bold,
+                        fontSize: Fonts.size(18),
+                        color: colors[cn.header.text],
+                    },
+                    headerBackTitleVisible: false,
+                    headerLeftContainerStyle: {
+                        marginLeft: Metrics.marginHorizontal * 0.1,
+                    },
+                    headerTintColor: colors[cn.header.backIcon]
+                }}
+                />
+
             <AppStack.Screen
                 name="setting-screen"
                 component={SettingsScreen}

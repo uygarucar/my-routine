@@ -17,9 +17,11 @@ const Metrics = {
   borderRadiusFullRound: 1000,
   borderRadiusStandard: 10,
   borderRadiusSmall: 5,
-  textMargin: width * 0.03,
+  textMargin: width * 0.05,
   boxNormalHeight: width * 0.12,
   boxTallHeight: width * 0.2,
+  borderWidth:1,
+  marginBottomTextinput:width*0.025,
 };
 
 export default Metrics;
