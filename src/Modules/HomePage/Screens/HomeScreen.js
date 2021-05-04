@@ -9,6 +9,9 @@ import Icon from '../../../Components/Icon';
 
 
 
+
+
+
 const HomeScreen = props => {
 
     const currentTheme = useTheme();
@@ -39,13 +42,12 @@ const HomeScreen = props => {
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={styles.textContainer}>
                     <TouchableOpacity style={styles.touchButton}>
-                        <Text style={styles.inputText}
-                            underlineColorAndroid='transparent'></Text>
+                        <Text style={styles.inputText}></Text>
                     </TouchableOpacity>
                 </View>
 
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.addbuttonTouchable}>
+                    <TouchableOpacity style={styles.addbuttonTouchable} onPress={() => props.navigation.navigate('routineAdd-screen')} >
                         <Icon svg={Svgs.Addbutton} iconStyle={{ color: '#433591' }}></Icon>
                     </TouchableOpacity>
                 </View>
