@@ -37,5 +37,8 @@ export default Colors => StyleSheet.create({
         padding: Metrics.width * 0.02,
        
      },
-
+     modal:{
+        justifyContent: 'center',
+        alignItems: 'center',
+     }
  })

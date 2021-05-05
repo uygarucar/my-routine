@@ -1,4 +1,4 @@
-const dummyRoutine = [
+const DummyData = [
     {
         id:1,
         routineName: 'sabah',
@@ -29,4 +29,4 @@ const dummyRoutine = [
     }
 ]
 
-export default dummyRoutine;
+export default DummyData;
