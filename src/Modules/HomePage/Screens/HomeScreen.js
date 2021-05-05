@@ -7,6 +7,8 @@ import getStyles from '../styles/HomeScreenStyles';
 import Modal from 'react-native-modal';
 import Icon from '../../../Components/Icon';
 import RoutinesListModal from '../Components/RoutinesListModal'
+import { useDispatch } from 'react-redux';
+import { changeMode } from '../../RoutinePages/Redux/RoutineRedux';
 
 
 
@@ -27,13 +29,21 @@ const HomeScreen = props => {
     const changeLocale = useDispatchChangeLocale();
     const [isModalVisible, setIsModalVisible] = useState(false)
 
-    const _onSelect_Theme = (key) => {
-        changeTheme(key);
+
+    const dispatch=useDispatch();
+
+    const _onPress_Edit = () => {
+        let changemode=changeMode(false);
+
+        dispatch(changemode);
     }
 
-    const _onSelect_Locale = (key) => {
-        changeLocale(key);
-    }
+    const _onPress_Add = () => {
+
+   const changemode=changeMode(true);
+
+        dispatch(changemode); 
+       }
 
     const _onPress_RoutinesListModal  = () => {
         setIsModalVisible(true)
@@ -50,6 +60,13 @@ const HomeScreen = props => {
                     <TouchableOpacity style={styles.touchButton} onPress={_onPress_RoutinesListModal}>
                         <Text style={styles.inputText}></Text>
                     </TouchableOpacity>
+                    <TouchableOpacity style={styles.touchButton} onPress={_onPress_Edit}>
+                        <Text style={styles.inputText}>Edit</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.touchButton} onPress={_onPress_Add}>
+                        <Text style={styles.inputText}>Add</Text>
+                    </TouchableOpacity>
+                    
                 </View>
 
                 <View style={styles.buttonContainer}>

@@ -1,16 +1,16 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { Fonts, Metrics } from '../../StylingConstants';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import SettingsScreen from '../Settings/Screens/SettingsScreen';
-import AuthScreen from '../Auth/Screens/AuthScreen';
 import HomeScreen from '../HomePage/Screens/HomeScreen';
 import RoutineAdd from '../RoutinePages/Screens/RoutineAddScreen';
 import SettingsIcon from './SettingsIcon'
 
 import { cn, useThemedColors } from '../Theming';
 import { useLocalization, tn } from '../Localization';
+import { useSelector } from 'react-redux';
+import { useAddEditSelectors } from '../RoutinePages/Redux/RoutineRedux';
 
 const AppStack = createStackNavigator();
 
@@ -18,6 +18,9 @@ const AppNavigation = props => {
 
     const colors = useThemedColors();
     const loc = useLocalization();
+    const addMode=useSelector(useAddEditSelectors);
+    const titleRoutineScreen=addMode ? loc.t(tn.addNew): loc.t(tn.edit);
+    
     return (
         <AppStack.Navigator>
            <AppStack.Screen
@@ -48,7 +51,7 @@ const AppNavigation = props => {
                 name="routineAdd-screen"
                 component={RoutineAdd}
                 options={{
-                    title: loc.t(tn.addNew),
+                    title:titleRoutineScreen,
                     headerStyle: {
                         backgroundColor: colors[cn.header.background],
                     },
