@@ -7,10 +7,10 @@ export default Colors => StyleSheet.create({
         width: Metrics.width * 0.8,
         minHeight: Metrics.height * 0.25,
         borderRadius: Metrics.borderRadiusStandard,
-        backgroundColor: 'white',
+        borderWidth: Metrics.borderWidth * 0.5,
+        backgroundColor: Colors[cn.modal.containerBackground],
         padding: Metrics.width * 0.05,
-        //Widthe göre yap
-        paddingTop: 9,
+        paddingTop: Metrics.width *0.03,
         justifyContent: 'space-between',
         flexDirection:'column',
         alignItems: 'center',
@@ -21,15 +21,18 @@ export default Colors => StyleSheet.create({
     },
     titleText:{
         color: Colors[cn.modal.title],
-        fontSize: Fonts.size(15) 
+        fontSize: Fonts.size(15),
     },
     itemsContainer:{
-        borderWidth: Metrics.borderWidth,
+        borderWidth: Metrics.borderWidth* 0.7,
         borderColor: Colors[cn.modal.routinesBorder],
         minHeight: Metrics.height * 0.2,
         minWidth: Metrics.width * 0.6,
         borderRadius: Metrics.borderRadiusStandard * 0.5,
-        
+        backgroundColor: Colors[cn.modal.containerBackground]
+    },
+    routinesText:{
+        color:Colors[cn.modal.routinesText]
     }
     /*,
     cityNameText: {

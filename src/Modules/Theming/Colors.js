@@ -11,7 +11,8 @@ const constantColors = {
 		3: '#393636', //ligth + dark: placeholder  -  dark: background
 		4: '#D6D6D6', //light: Home- input box border'ı
 		5: '#959595',
-		6: '#C9C9C9' //dark mod: settigs - titleText, signOutButtonBorder, signOutButtonText
+		6: '#C9C9C9', //dark mod: settigs - titleText, signOutButtonBorder, signOutButtonText,
+
 	},
 	blues: {
 		1: '#1C0C7B', //light mode: "Giriş Yap" yazısı
@@ -85,7 +86,10 @@ const header = {
 const modal = {
 	title: 'modal/title',
 	modalBorder:'modal/modalBorder',
-	routinesBorder: 'modal/routinesBorder'
+	routinesBorder: 'modal/routinesBorder',
+	containerBackground: 'modal/containerBackground',
+	routinesBackground: 'modal/routinesBackground',
+	routinesText:'modal/routinesText'
 }
 export const cn={
 	auth,
@@ -133,6 +137,9 @@ export const lightColors = {
 	[modal.title]: constantColors.blues[1],
 	[modal.modalBorder]: constantColors.greys[4],
 	[modal.routinesBorder]: constantColors.greys[4],
+	[modal.containerBackground]: constantColors.white,
+	[modal.routinesBackground]: constantColors.white,
+	[modal.routinesText]: constantColors.black
 };
 
 
@@ -171,8 +178,11 @@ export const darkColors = {
     [header.backIcon]: constantColors.greys[6],
     [header.rightIcon]: constantColors.white,
 	//modal
-	[modal.title]: constantColors.blues[1],
+	[modal.title]: constantColors.greys[6],
 	[modal.modalBorder]: constantColors.greys[4],
 	[modal.routinesBorder]: constantColors.greys[4],
+	[modal.containerBackground]: constantColors.greys[3],
+	[modal.routinesBackground]: constantColors.greys[3],
+	[modal.routinesText]: constantColors.greys[6]
 };
 

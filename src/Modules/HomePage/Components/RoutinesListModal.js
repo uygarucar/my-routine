@@ -18,8 +18,8 @@ const RoutinesListModal = props => {
                 <Text style={styles.titleText}>{DummyData[1].routineName}</Text>
             </View>
             <View style={styles.itemsContainer}>
-                <Text>{DummyData[0].routines[0]}</Text>
-                <Text>{DummyData[0].routines[1]}</Text>
+                <Text style={styles.routinesText}>{DummyData[0].routines[0]}</Text>
+                <Text style={styles.routinesText}>{DummyData[0].routines[1]}</Text>
             </View>
         </View>
     )

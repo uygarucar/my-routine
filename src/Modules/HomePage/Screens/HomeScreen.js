@@ -73,9 +73,9 @@ const HomeScreen = props => {
                     // açılış arkaplan kararma süresü
                     backdropTransitionInTiming={3000}
                     // arkaplan rengi
-                    backdropColor={'grey'}
+                    backdropColor={'black'}
                     // arkaplan opaklık
-                    backdropOpacity={0.8}
+                    backdropOpacity={0.5}
                 >
                     <RoutinesListModal />
                 </Modal>
