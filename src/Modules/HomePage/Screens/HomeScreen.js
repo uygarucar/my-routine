@@ -36,6 +36,7 @@ const HomeScreen = props => {
         let changemode=changeMode(false);
 
         dispatch(changemode);
+        props.navigation.navigate('routineAdd-screen')
     }
 
     const _onPress_Add = () => {
@@ -43,6 +44,7 @@ const HomeScreen = props => {
    const changemode=changeMode(true);
 
         dispatch(changemode); 
+        props.navigation.navigate('routineAdd-screen')
        }
 
     const _onPress_RoutinesListModal  = () => {
@@ -63,14 +65,12 @@ const HomeScreen = props => {
                     <TouchableOpacity style={styles.touchButton} onPress={_onPress_Edit}>
                         <Text style={styles.inputText}>Edit</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.touchButton} onPress={_onPress_Add}>
-                        <Text style={styles.inputText}>Add</Text>
-                    </TouchableOpacity>
+                    
                     
                 </View>
 
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.addbuttonTouchable} onPress={() => props.navigation.navigate('routineAdd-screen')} >
+                    <TouchableOpacity style={styles.addbuttonTouchable} onPress={_onPress_Add} >
                         <Icon svg={Svgs.Addbutton} iconStyle={{ color: themedColors[cn.header.background]}}></Icon>
                     </TouchableOpacity>
                 </View>
