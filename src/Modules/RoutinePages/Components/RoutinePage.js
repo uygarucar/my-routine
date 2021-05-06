@@ -16,8 +16,8 @@ import { cn } from '../../Theming';
 const RoutunePage = props => {
 
     const [todaydate, setDateToday] = useState('');
+
     const [date, setDate] = useState(new Date());
-    
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
 
@@ -44,23 +44,25 @@ const RoutunePage = props => {
 
 
     const onChange = (event, selectedDate) => {
-        const currentDate = selectedDate || date;
-        setShow(Platform.OS === 'ios');
-        setDate(currentDate);
-        console.log(date);
-        setDateToday(moment(date).format('DD-MM-YYYY'))
+        if (event.type === 'dismissed') {
+            setShow(false);
+        }
 
+        else {
+            const currentDate = selectedDate;
+            setShow(Platform.OS === 'ios');
+            setDate(currentDate);
+            setDateToday(moment(currentDate).format('DD-MM-YYYY'))
+
+        }
     };
 
 
-    const showMode = (currentMode) => {
+    const showMode = () => {
         setShow(true);
-        setMode(currentMode);
+        setMode('date');
     };
 
-    const showDatepicker = () => {
-        showMode('date');
-    };
 
 
     return (
@@ -77,19 +79,19 @@ const RoutunePage = props => {
                 </View>
 
                 <View style={styles.ViewInput}>
-                   <TouchableOpacity
-                   style={styles.calendar}
-                   onPress={showDatepicker}
-                   >
-                   <TextInput
-                        style={[styles.textInput,styles.datetextInput]}
-                        placeholder={loc.t(tn.startDate)}
-                        placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
-                        value={todaydate}
-                        editable={false}
+                    <TouchableOpacity
+                        style={styles.calendar}
+                        onPress={showMode}
                     >
-                    </TextInput>
-                   </TouchableOpacity>
+                        <TextInput
+                            style={[styles.textInput, styles.datetextInput]}
+                            placeholder={loc.t(tn.startDate)}
+                            placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
+                            value={todaydate}
+                            editable={false}
+                        >
+                        </TextInput>
+                    </TouchableOpacity>
 
                     <TouchableOpacity style={styles.today} onPress={todaysDate}>
                         <Text style={styles.todayText}>{loc.t(tn.today)}</Text>
