@@ -30,10 +30,10 @@ const HomeScreen = props => {
     const [isModalVisible, setIsModalVisible] = useState(false)
 
 
-    const dispatch=useDispatch();
+    const dispatch = useDispatch();
 
     const _onPress_Edit = () => {
-        let changemode=changeMode(false);
+        let changemode = changeMode(false);
 
         dispatch(changemode);
         props.navigation.navigate('routineAdd-screen')
@@ -41,13 +41,13 @@ const HomeScreen = props => {
 
     const _onPress_Add = () => {
 
-   const changemode=changeMode(true);
+        const changemode = changeMode(true);
 
-        dispatch(changemode); 
+        dispatch(changemode);
         props.navigation.navigate('routineAdd-screen')
-       }
+    }
 
-    const _onPress_RoutinesListModal  = () => {
+    const _onPress_RoutinesListModal = () => {
         setIsModalVisible(true)
     }
 
@@ -59,19 +59,18 @@ const HomeScreen = props => {
         <View style={styles.container}>
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={styles.textContainer}>
+
                     <TouchableOpacity style={styles.touchButton} onPress={_onPress_RoutinesListModal}>
                         <Text style={styles.inputText}>{DummyData[0].routineName}</Text>
+                        <TouchableOpacity style={styles.editbuttonTouchable} onPress={_onPress_Edit}>
+                            <Icon svg={Svgs.Editbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>
+                        </TouchableOpacity>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.touchButton} onPress={_onPress_Edit}>
-                        <Text style={styles.inputText}>Edit</Text>
-                    </TouchableOpacity>
-                    
-                    
                 </View>
 
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.addbuttonTouchable} onPress={_onPress_Add} >
-                        <Icon svg={Svgs.Addbutton} iconStyle={{ color: themedColors[cn.header.background]}}></Icon>
+                        <Icon svg={Svgs.Addbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>
                     </TouchableOpacity>
                 </View>
                 <Modal

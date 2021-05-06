@@ -12,15 +12,13 @@ export default Colors => StyleSheet.create({
     inputText:{
         fontSize: Fonts.size(16),
         fontFamily: Fonts.type.regular,
-        borderRadius: Metrics.borderRadiusStandard,
         paddingHorizontal:Metrics.textMargin,
-        alignItems: "center",
-        borderColor: Colors[cn.home.routinesBorder],
-        borderWidth: Metrics.borderWidth,
         color:Colors[cn.home.routinesText],
         marginBottom:Metrics.marginBottomTextinput,
-        paddingVertical:10,
+        paddingVertical:Metrics.width * 0.0001,
+        paddingHorizontal: 10,
         marginTop:10,
+        
     },
 
     buttonContainer:{
@@ -40,5 +38,27 @@ export default Colors => StyleSheet.create({
      modal:{
         justifyContent: 'center',
         alignItems: 'center',
+     },
+
+     editbuttonTouchable:{
+        width: Metrics.width * 0.06,
+        aspectRatio: 1,
+        height: undefined,
+        marginVertical: 10,
+   
+     }, 
+
+     touchButton: {
+        borderRadius: Metrics.borderRadiusStandard,
+        borderColor: Colors[cn.home.routinesBorder],
+        borderWidth: Metrics.borderWidth,
+        paddingHorizontal: 10,
+        marginTop:10,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        
+      
+      
      }
- })
+
+    })
