@@ -1,8 +1,11 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import {Text, TextInput, View } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import moment from 'moment';
+import DateTimePicker from '@react-native-community/datetimepicker';
+
+
 import { useThemedColors } from '../../Theming';
 import getStyles from '../styles/RoutuneAddStyles';
 
@@ -12,7 +15,10 @@ import { cn } from '../../Theming';
 
 const RoutunePage = props => {
 
-    const [date, setDate] = useState('');
+    const [todaydate, setDateToday] = useState('');
+    const [date, setDate] = useState(new Date());
+    const [mode, setMode] = useState('date');
+    const [show, setShow] = useState(false);
 
     const loc = useLocalization();
     const themedColors = useThemedColors();
@@ -21,19 +27,40 @@ const RoutunePage = props => {
 
     useEffect(() => {
         if (props.value !== undefined) {
-            setDate(props.value)
+            setDateToday(props.value)
         }
     }, [])
 
-    const TodaysDate = () => {
+    const todaysDate = () => {
         if (locale === Locales.turkish) {
-            setDate(moment().format('DD-MM-YYYY'))
+            setDateToday(moment().format('DD-MM-YYYY'))
         }
         else {
-            setDate(moment().format('MM-DD-YYYY'))
+            setDateToday(moment().format('MM-DD-YYYY'))
         }
 
     }
+
+
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setShow(Platform.OS === 'ios');
+        setDate(currentDate);
+        console.log(date);
+        setDateToday(moment(date).format('DD-MM-YYYY'))
+
+    };
+
+
+    const showMode = (currentMode) => {
+        setShow(true);
+        setMode(currentMode);
+    };
+
+    const showDatepicker = () => {
+        showMode('date');
+    };
+
 
     return (
         <>
@@ -49,18 +76,35 @@ const RoutunePage = props => {
                 </View>
 
                 <View style={styles.ViewInput}>
-                    <TextInput
-                        style={styles.textInput}
+                   <TouchableOpacity
+                   style={styles.calendar}
+                   onPress={showDatepicker}
+                   >
+                   <TextInput
+                        style={[styles.textInput,styles.datetextInput]}
                         placeholder={loc.t(tn.startDate)}
                         placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
-                        value={date}
+                        value={todaydate}
                         editable={false}
                     >
                     </TextInput>
-                    <TouchableOpacity style={styles.today} onPress={TodaysDate}>
+                   </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.today} onPress={todaysDate}>
                         <Text style={styles.todayText}>{loc.t(tn.today)}</Text>
                     </TouchableOpacity>
                 </View>
+
+                {show && (
+                    <DateTimePicker
+                        testID="dateTimePicker"
+                        value={date}
+                        mode={mode}
+                        is24Hour={true}
+                        display="default"
+                        onChange={onChange}
+                    />
+                )}
 
                 <View style={styles.ViewInput}>
                     <TextInput
@@ -81,7 +125,7 @@ const RoutunePage = props => {
 
             </View>
         </>
-      
+
     );
 };
 
