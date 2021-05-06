@@ -18,7 +18,6 @@ export default Colors => StyleSheet.create({
         paddingVertical:Metrics.width * 0.0001,
         paddingHorizontal: 10,
         marginTop:10,
-        
     },
 
     buttonContainer:{
@@ -44,21 +43,31 @@ export default Colors => StyleSheet.create({
         width: Metrics.width * 0.06,
         aspectRatio: 1,
         height: undefined,
-        marginVertical: 10,
+        justifyContent: 'center',
+        alignSelf: 'center',  
+        marginHorizontal:Metrics.marginHorizontal     
    
      }, 
+     iconStyle:{
+
+     },
 
      touchButton: {
+      //   borderRadius: Metrics.borderRadiusStandard,
+      //   borderColor: Colors[cn.home.routinesBorder],
+      //   borderWidth: Metrics.borderWidth,
+        paddingHorizontal: 10,
+        flex:0.9
+      
+      
+     },
+     textContainer:{
+        flexDirection:'row',
         borderRadius: Metrics.borderRadiusStandard,
         borderColor: Colors[cn.home.routinesBorder],
         borderWidth: Metrics.borderWidth,
-        paddingHorizontal: 10,
-        marginTop:10,
-        flexDirection: 'row',
         justifyContent: 'space-between',
-        
-      
-      
+
      }
 
     })

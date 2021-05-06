@@ -59,12 +59,12 @@ const HomeScreen = props => {
         <View style={styles.container}>
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={styles.textContainer}>
-
                     <TouchableOpacity style={styles.touchButton} onPress={_onPress_RoutinesListModal}>
-                        <Text style={styles.inputText}>{DummyData[0].routineName}</Text>
-                        <TouchableOpacity style={styles.editbuttonTouchable} onPress={_onPress_Edit}>
+                        <Text style={styles.inputText}>{DummyData[0].routineName}</Text>                       
+                    </TouchableOpacity>
+                    
+                    <TouchableOpacity style={styles.editbuttonTouchable} onPress={_onPress_Edit}>
                             <Icon svg={Svgs.Editbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>
-                        </TouchableOpacity>
                     </TouchableOpacity>
                 </View>
 
