@@ -15,7 +15,7 @@ const RoutinesListModal = props => {
     return (
         <View style={styles.container}>
             <View style={styles.titleContainer}>
-                <Text style={styles.titleText}>{DummyData[1].routineName}</Text>
+                <Text style={styles.titleText}>{DummyData[0].routineName}</Text>
             </View>
             <View style={styles.itemsContainer}>
                 <Text style={styles.routinesText}>{DummyData[0].routines[0]}</Text>

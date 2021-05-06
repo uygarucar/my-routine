@@ -9,7 +9,7 @@ import Icon from '../../../Components/Icon';
 import RoutinesListModal from '../Components/RoutinesListModal'
 import { useDispatch } from 'react-redux';
 import { changeMode } from '../../RoutinePages/Redux/RoutineRedux';
-
+import DummyData from '../Components/DummyData'
 
 
 
@@ -60,7 +60,7 @@ const HomeScreen = props => {
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={styles.textContainer}>
                     <TouchableOpacity style={styles.touchButton} onPress={_onPress_RoutinesListModal}>
-                        <Text style={styles.inputText}></Text>
+                        <Text style={styles.inputText}>{DummyData[0].routineName}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.touchButton} onPress={_onPress_Edit}>
                         <Text style={styles.inputText}>Edit</Text>
