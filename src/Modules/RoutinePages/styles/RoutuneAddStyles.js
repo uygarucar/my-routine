@@ -2,7 +2,13 @@ import { StyleSheet } from 'react-native';
 import { cn } from '../../Theming';
 import { Metrics, Fonts } from '../../../StylingConstants';
 
+
+
+
 export default Colors => StyleSheet.create({
+
+
+
     container: {
         flex: 1,
         backgroundColor: Colors[cn.settings.background],
@@ -50,10 +56,16 @@ export default Colors => StyleSheet.create({
         // alignItems: "center",
         flexGrow: 1,//
     },
-     datetextInput: {
-        
+    datetextInput: {
+        fontSize: Fonts.size(16),
+        fontFamily: Fonts.type.regular,
+        borderRadius: Metrics.borderRadiusStandard,
+        paddingHorizontal: Metrics.textMargin,
+        // alignItems: "center",
+        height: Metrics.width * 0.13,
         flexGrow: 0.1,
-        paddingRight:0,
+        paddingRight: 0,
+        textAlignVertical:'center',
     },
 
 
@@ -89,5 +101,6 @@ export default Colors => StyleSheet.create({
     calendar: {
         flexDirection: 'row',
         width: Metrics.width * 0.72,
+        
     }
 });
