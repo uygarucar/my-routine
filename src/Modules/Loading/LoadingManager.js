@@ -25,7 +25,7 @@ const LoadingManager = props => {
             style={styles.modal}
         >
             <View style={styles.container}>
-                <ActivityIndicator size="large" />
+                <ActivityIndicator color="white" size="large" />
             </View>
         </Modal>
     )
