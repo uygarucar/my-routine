@@ -10,7 +10,7 @@ import RoutinesListModal from '../Components/RoutinesListModal'
 import { useDispatch } from 'react-redux';
 import { changeMode } from '../../RoutinePages/Redux/RoutineRedux';
 import DummyData from '../Components/DummyData'
-
+import { addItem } from '../API/Firebase'
 
 
 
@@ -54,20 +54,28 @@ const HomeScreen = props => {
     const _onPress_ModalBackdrop = () => {
         setIsModalVisible(false)
     }
-
+    const _onPress_SendToFirebase = () => {
+        addItem(DummyData[1], null)
+    }
     return (
         <View style={styles.container}>
             <SafeAreaView style={{ flex: 1 }}>
                 <View style={styles.textContainer}>
                     <TouchableOpacity style={styles.touchButton} onPress={_onPress_RoutinesListModal}>
-                        <Text style={styles.inputText}>{DummyData[0].routineName}</Text>                       
+                        <Text style={styles.inputText}>{DummyData[0].routineName}</Text>
                     </TouchableOpacity>
-                    
+
+
+
                     <TouchableOpacity style={styles.editbuttonTouchable} onPress={_onPress_Edit}>
-                            <Icon svg={Svgs.Editbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>
+                        <Icon svg={Svgs.Editbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>
                     </TouchableOpacity>
                 </View>
-
+                <View style={{maxHeight: 30, flex: 1, borderWidth: 1, marginTop: 10}}>
+                    <TouchableOpacity onPress={_onPress_SendToFirebase} style={styles.touchButton}>
+                        <Text>It sends DummyData[1] to Firebase</Text>
+                    </TouchableOpacity>
+                </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.addbuttonTouchable} onPress={_onPress_Add} >
                         <Icon svg={Svgs.Addbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>
