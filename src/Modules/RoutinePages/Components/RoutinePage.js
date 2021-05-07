@@ -19,9 +19,14 @@ const RoutunePage = props => {
     const [endDate, setDateEnd] = useState('');
 
     const [emptyDate, setemptyDate] = useState(true);
+    const [emptyDateEnd, setemptyDateEnd] = useState(true);
+
 
 
     const [date, setDate] = useState(new Date());
+    const [dateEnd, setEndDate] = useState(new Date());
+
+
     const [mode, setMode] = useState('date');
 
     const [show, setShow] = useState(false);
@@ -71,13 +76,15 @@ const RoutunePage = props => {
 
     const onChangeEnd = (event, selectedDate) => {
         if (event.type === 'dismissed') {
-            setShow(false);
+            setShowEnd(false);
+            setemptyDateEnd(true);
+
         }
 
         else {
             const currentDate = selectedDate;
-            setShow(Platform.OS === 'ios');
-            setDate(currentDate);
+            setShowEnd(Platform.OS === 'ios');
+            setEndDate(currentDate);
             setDateEnd(moment(currentDate).format('DD-MM-YYYY'))
 
         }
@@ -89,6 +96,14 @@ const RoutunePage = props => {
         setemptyDate(false);
 
     };
+
+    const showModeEnd = () => {
+        setShowEnd(true);
+        setMode('date');
+        setemptyDateEnd(false);
+
+    };
+
 
 
 
@@ -115,7 +130,7 @@ const RoutunePage = props => {
                                 emptyDate ?
                                     loc.t(tn.startDate) :
                                     todaydate
-                         }
+                            }
 
                         </Text>
                     </TouchableOpacity>
@@ -137,12 +152,30 @@ const RoutunePage = props => {
                 )}
 
                 <View style={styles.ViewInput}>
-                    <TextInput
-                        style={styles.textInput}
-                        placeholder={loc.t(tn.endDate)}
-                        placeholderTextColor={themedColors[cn.auth.inputPlaceholder]}
-                    ></TextInput>
+                    <TouchableOpacity
+                        style={styles.calendar}
+                        onPress={showModeEnd} >
+                        <Text
+                            style={[styles.datetextInput, { color: emptyDateEnd ? themedColors[cn.auth.inputPlaceholder] : themedColors[cn.home.routinesText] }]}
+                        >{
+                                emptyDateEnd ?
+                                    loc.t(tn.endDate) :
+                                    endDate
+                            }
+
+                        </Text>
+                    </TouchableOpacity>
                 </View>
+                {showEnd && (
+                    <DateTimePicker
+                        testID="dateTimePicker"
+                        value={dateEnd}
+                        mode={mode}
+                        is24Hour={true}
+                        display="default"
+                        onChange={onChangeEnd}
+                    />
+                )}
 
                 <View style={styles.ViewInput}>
                     <TextInput
