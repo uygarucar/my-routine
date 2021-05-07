@@ -21,10 +21,11 @@ const RoutunePage = props => {
     const [emptyDate, setemptyDate] = useState(true);
 
 
-
     const [date, setDate] = useState(new Date());
     const [mode, setMode] = useState('date');
+
     const [show, setShow] = useState(false);
+    const [showEnd, setShowEnd] = useState(false);
 
     const loc = useLocalization();
     const themedColors = useThemedColors();
@@ -51,10 +52,11 @@ const RoutunePage = props => {
 
 
     const onChange = (event, selectedDate) => {
-        setemptyDate(false);
 
         if (event.type === 'dismissed') {
             setShow(false);
+            setemptyDate(true);
+
         }
 
         else {
