@@ -20,18 +20,7 @@ export default Colors => StyleSheet.create({
         // flexShrink:1,
 
     },
-    // textInput:{
-    //     fontSize: Fonts.size(16),
-    //     fontFamily: Fonts.type.regular,
-    //     borderRadius: Metrics.borderRadiusStandard,
-    //     paddingHorizontal:Metrics.textMargin,
-    //     borderColor: Colors[cn.home.routinesBorder],
-    //     borderWidth: Metrics.borderWidth,
-    //     color:Colors[cn.home.routinesText],
-    //     marginBottom:Metrics.marginBottomTextinput,
-    //     // alignItems: "center",
 
-    // },
 
     ViewInput: {
         fontSize: Fonts.size(16),

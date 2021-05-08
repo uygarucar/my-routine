@@ -4,7 +4,7 @@ import {getCurrentUser} from '../../Auth';
 export const addItem = async(item, onComplete) => {
     try{
         const itemThumbnail = {
-            title: item.routineName
+            title: item.title
         };
 
         const userId = getCurrentUser().uid;
