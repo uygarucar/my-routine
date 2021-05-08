@@ -67,8 +67,11 @@ const RoutineAddScreen = props => {
     }, []);
 
     const todaysDate = () => {
+        setemptyDate(false);
+        console.log("bugün")
         if (locale === Locales.turkish) {
             setDateToday(moment().format('DD-MM-YYYY'))
+            console.log(todaydate);
         }
         else {
             setDateToday(moment().format('MM-DD-YYYY'))
