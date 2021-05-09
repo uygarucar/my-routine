@@ -24,7 +24,7 @@ const RoutineAddScreen = props => {
     const itemKey = props.route.params?.itemKey;
 
     const [itemName, setItemName] = useState('');
-    const [itemRoutines, setItemRoutines] = useState([]);
+    const [itemRoutines, setItemRoutines] = useState('');
 
     const [todaydate, setDateToday] = useState('');
     const [endDate, setDateEnd] = useState('');
@@ -240,16 +240,9 @@ const RoutineAddScreen = props => {
                     </View>
 
                 </View>
-
-                {
-                    addMode ?
-                        <TouchableOpacity style={styles.addTouchable} onPress={_onPress_add_edit}>
-                            <Text style={styles.addText}>{loc.t(tn.add)}</Text>
+                         <TouchableOpacity style={styles.addTouchable} onPress={_onPress_add_edit}>
+                            <Text style={styles.addText}>{ addMode ? loc.t(tn.add): loc.t(tn.edit) }</Text>
                         </TouchableOpacity>
-                        :
-                        <TouchableOpacity style={styles.addTouchable} onPress={_onPress_add_edit}>
-                            <Text style={styles.addText}>{loc.t(tn.edit)}</Text>
-                        </TouchableOpacity>}
 
             </SafeAreaView>
         </View>

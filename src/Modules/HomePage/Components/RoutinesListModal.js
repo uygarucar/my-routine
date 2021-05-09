@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, FlatList, Text } from 'react-native';
-import styles from '../styles/RoutinesListModalStyles'
 import DummyData from './DummyData'
 import {useTheme, useThemedColors, useThemeOptions } from '../../Theming/index';
 import getStyles from '../styles/RoutinesListModalStyles'
@@ -8,7 +7,6 @@ import getStyles from '../styles/RoutinesListModalStyles'
 
 const RoutinesListModal = props => {
 
-    //const currentTheme=useTheme();
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
 

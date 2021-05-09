@@ -4,7 +4,8 @@ const constantColors = {
     black: '#000000',
     transparent: 'transparent',
     mainColor1: '#796FB2', //light mode: light purple
-	mainColor2: '#202454', //dark mode: dark blue
+	mainColor2: '#202454', //dark mode: dark 
+	mainColor3: '#6c61ab', //dark mode için alternatif mor
 	greys: {
 		1: '#ACACAC', //light mode: settings - seçili olmayan ikon rengi
 		2: '#7F7F7F', //light mode: çöp tenekesi ikonu rengi
@@ -21,7 +22,7 @@ const constantColors = {
 		//light mode: settings -  seçili ikonun rengi
 		//light mode: settings - Renk Teması ve Dil isimlendirmeleri
 		//light mode: Yeni Ekle sf. - Bugün yazısı
-		2: '#433591', 
+		2: '#433591', // option menu başlık renkleri 
 		3: '#1C0C7B', //light mode: Anasayfa - Modal butonunda çıkan isimlendirme - Örn:işten dönerken
 		4: '#32538D',
 		5: '#202454'
@@ -169,7 +170,7 @@ export const darkColors = {
 	[settings.radioButtonUnselectedIcon]: constantColors.greys[1],
 	[settings.radioButtonSelectedIcon]: constantColors.blues[4],
 	[settings.radioButtonText]: constantColors.greys[6],
-	[settings.signOutButtonBackground]: constantColors.blues[5],
+	[settings.signOutButtonBackground]: constantColors.mainColor2,
 	[settings.signOutButtonBorder]: constantColors.greys[6],
 	[settings.signOutButtonText]: constantColors.greys[6],
 	//header
