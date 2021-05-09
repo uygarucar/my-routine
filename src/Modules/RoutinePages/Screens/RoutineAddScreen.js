@@ -131,27 +131,39 @@ const RoutineAddScreen = props => {
 
     const addMode = useSelector(useAddEditSelectors);
 
-    const _onPress_add_edit = () => {
-        const item = {
-            key: itemKey,
-            title: itemName,
-            todaydate: todaydate,
-            endDate: endDate,
-            routines: itemRoutines,
-        };
-        const onComplete = () => {
-            props.navigation.goBack();
+    const isEmpty = () => {
+        if (itemName.trim() === '' || todaydate.trim() === '' || endDate.trim() === '' || itemRoutines.trim() === '') {
+            alert("Tüm Alanlar doldurulmalı");
+            return false;
         }
-
-        if (itemKey) {
-            console.log('updating')
-            updateItem(item, onComplete);
-        }
-        else {
-            addItem(item, onComplete);
-        }
+        return true;
     }
-   
+    const _onPress_add_edit = () => {
+        if (isEmpty() === true) {
+            const item = {
+                key: itemKey,
+                title: itemName,
+                todaydate: todaydate,
+                endDate: endDate,
+                routines: itemRoutines,
+            };
+            const onComplete = () => {
+                props.navigation.navigate('homepage-screen');
+            }
+
+            if (itemKey) {
+                console.log('updating')
+                updateItem(item, onComplete);
+            }
+            else {
+                addItem(item, onComplete);
+                // alert("Yeni Rutin Başarılı bir şekilde eklendi")
+
+            }
+        }
+       
+    }
+
 
     return (
         <View style={styles.container}>
@@ -240,9 +252,9 @@ const RoutineAddScreen = props => {
                     </View>
 
                 </View>
-                         <TouchableOpacity style={styles.addTouchable} onPress={_onPress_add_edit}>
-                            <Text style={styles.addText}>{ addMode ? loc.t(tn.add): loc.t(tn.edit) }</Text>
-                        </TouchableOpacity>
+                <TouchableOpacity style={styles.addTouchable} onPress={_onPress_add_edit}>
+                    <Text style={styles.addText}>{addMode ? loc.t(tn.add) : loc.t(tn.edit)}</Text>
+                </TouchableOpacity>
 
             </SafeAreaView>
         </View>

@@ -13,6 +13,7 @@ const constantColors = {
 		4: '#D6D6D6', //light: Home- input box border'ı
 		5: '#959595',
 		6: '#C9C9C9', //dark mod: settigs - titleText, signOutButtonBorder, signOutButtonText,
+		7:'#7F7F7F', //çöp ikon rengi
 
 	},
 	blues: {
@@ -62,6 +63,7 @@ const home = {
 		routinesBorder:'home/routinesBorder',
 		routinesBackground:'home/routinesBackground',
 		addButtonBackground:'home/addButtonBackground',
+		trashiconColor:'home/trashiconColor',
 		
 };
 
@@ -118,6 +120,8 @@ export const lightColors = {
 	[home.routinesBorder]: constantColors.greys[2],
 	[home.routinesBackground]: constantColors.transparent,
 	[home.addButtonBackground]: constantColors.blues[2],
+	[home.trashiconColor]:constantColors.greys[7],
+
 	//settings
 	[settings.background]: constantColors.white,
 	[settings.usernameText]: constantColors.black,
@@ -162,6 +166,7 @@ export const darkColors = {
 	[home.routinesBorder]: constantColors.greys[4],
 	[home.routinesBackground]: constantColors.transparent,
 	[home.addButtonBackground]: constantColors.blues[2],
+	[home.trashiconColor]:constantColors.greys[7],
 	//settings
 	[settings.background]: constantColors.greys[3],
 	[settings.usernameText]: constantColors.greys[6],

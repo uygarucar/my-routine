@@ -29,7 +29,7 @@ const HomeScreen = props => {
         dispatch(addMode);
         props.navigation.navigate('routineAdd-screen')
     }
-    const _onPress_Edit = () => {
+    const _onPress_Edit = (itemKey) => {
         const addMode = changeMode(false);
         dispatch(addMode);
         props.navigation.navigate('routineAdd-screen')

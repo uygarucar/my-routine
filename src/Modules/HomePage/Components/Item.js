@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Text, SafeAreaView, TouchableOpacity, View } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
 import getStyles from '../styles/HomeScreenStyles';
 import RoutinesListModal from './RoutinesListModal';
 import DummyData from './DummyData';
 import Icon from '../../../Components/Icon';
 import { Svgs } from '../../../StylingConstants';
+import {deleteItem} from '../../RoutinePages/API/Firebase';
 
 import { cn, useThemedColors } from '../../Theming';
 import Modal from 'react-native-modal';
@@ -21,11 +21,11 @@ const Item = props => {
     const _onPress_Edit_Mode = () => {
         setEditMode(true)
     }
-    const _onPress_Edit = () => {
-        props.onPress()
+    const _onPress_Edit = (itemKey) => {
+        props.onPress(itemKey)
     }
     const _onPress_Delete = () => {
-        props.onPress()
+        // deleteItem(item.key);
     }
 
     const _onPress_RoutinesListModal = () => {
@@ -56,11 +56,10 @@ const Item = props => {
                             </View>
                         </TouchableOpacity>
 
-                        {/* çöp ikonu aşaya gelicek, ikon rengi colors a eklenecek gri */}
                         <TouchableOpacity style={styles.iconTouchable}
                             onPress={_onPress_Delete}>
                             <View style={styles.editbuttonView}>
-                                <Icon svg={Svgs.Editbutton} iconStyle={{ color: themedColors[cn.home.routinesText] }}></Icon>
+                                <Icon svg={Svgs.Deletebutton} iconStyle={{ color: themedColors[cn.home.trashiconColor] }}></Icon>
                             </View>
                         </TouchableOpacity>
                         </>
