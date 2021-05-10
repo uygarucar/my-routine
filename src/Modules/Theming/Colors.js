@@ -4,12 +4,12 @@ const constantColors = {
     black: '#000000',
     transparent: 'transparent',
     mainColor1: '#796FB2', //light mode: light purple
-	mainColor2: '#202454', //dark mode: dark 
-	mainColor3: '#6c61ab', //dark mode için alternatif mor
+	mainColor3: '#202454', //dark mode: dark 
+	mainColor2: '#6c61ab', //dark mode için alternatif mor
 	greys: {
 		1: '#ACACAC', //light mode: settings - seçili olmayan ikon rengi
 		2: '#7F7F7F', //light mode: çöp tenekesi ikonu rengi
-		3: '#393636', //ligth + dark: placeholder  -  dark: background
+		3: '#4c4c4c', //ligth + dark: placeholder  -  dark: background
 		4: '#D6D6D6', //light: Home- input box border'ı
 		5: '#959595',
 		6: '#C9C9C9', //dark mod: settigs - titleText, signOutButtonBorder, signOutButtonText,
@@ -23,9 +23,9 @@ const constantColors = {
 		//light mode: settings -  seçili ikonun rengi
 		//light mode: settings - Renk Teması ve Dil isimlendirmeleri
 		//light mode: Yeni Ekle sf. - Bugün yazısı
-		2: '#433591', // option menu başlık renkleri 
+		2: '#8b83bd', // option menu başlık renkleri 
 		3: '#1C0C7B', //light mode: Anasayfa - Modal butonunda çıkan isimlendirme - Örn:işten dönerken
-		4: '#32538D',
+		4: '#8b83bd',
 		5: '#202454'
 	},
 };
