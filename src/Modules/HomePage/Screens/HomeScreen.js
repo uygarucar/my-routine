@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { changeMode } from '../../RoutinePages/Redux/RoutineRedux';
 import Item from '../Components/Item';
 import { subscribeToItemData } from '../../RoutinePages/API/Firebase';
+import { useLocalization ,tn} from '../../Localization';
 
 
 
@@ -21,6 +22,7 @@ const HomeScreen = props => {
 
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
+    const loc = useLocalization();
 
     const dispatch = useDispatch();
 
@@ -51,23 +53,32 @@ const HomeScreen = props => {
     const _render_Item = ({ item }) => {
         // item'e basıldığında id'sini gönderiyoruz
         return (
-            <Item
+           <View style={{flex:1}}>
+                <Item
                 onPress={()=>_onPress_Edit(item)}
                 item={item}
             >
             </Item>
+           </View>
         )
     }
+    const emptydata=itemList===null;
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
-                <FlatList
+                {
+                    emptydata ?
+                    <Text>{loc.t(tn.emptyList)}</Text>
+                    :
+                    <FlatList
                     style={{ flexShrink: 1, flexGrow: 1 }}
                     data={itemList}
                     renderItem={_render_Item}
                     keyExtractor={item => item.key}
 
                 />
+               
+                }
                
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.addbuttonTouchable} onPress={_onPress_Add} >

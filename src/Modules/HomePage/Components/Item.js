@@ -65,7 +65,7 @@ const Item = props => {
                     </>
                     :
                     null}
-            <Modal
+            {/* <Modal
                 isVisible={isModalVisible}
                 // arkaplana tıklayınca fonksiyonu
                 onBackdropPress={_onPress_ModalBackdrop}
@@ -86,7 +86,7 @@ const Item = props => {
                 backdropOpacity={0.5}
             >
                 <RoutinesListModal/>
-            </Modal>
+            </Modal> */}
         </View>
 
     );

@@ -59,6 +59,8 @@ const RoutineAddScreen = props => {
     useEffect(() => {
         if (itemKey) {
             getItemDetail(itemKey, item => {
+                setemptyDate(false);
+                setemptyDateEnd(false);
                 setItemName(item.title);
                 setDateToday(item.todayDate);
                 setDateEnd(item.EndDate);
