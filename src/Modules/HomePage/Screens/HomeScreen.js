@@ -12,6 +12,7 @@ import { changeMode } from '../../RoutinePages/Redux/RoutineRedux';
 import Item from '../Components/Item';
 import { subscribeToItemData } from '../../RoutinePages/API/Firebase';
 import { useLocalization ,tn} from '../../Localization';
+import { setIsLoadingAC } from '../../Loading/LoadingRedux';
 
 
 
@@ -33,6 +34,7 @@ const HomeScreen = props => {
         props.navigation.navigate('routineAdd-screen')
     }
     const _onPress_Edit = item => {
+        dispatch(setIsLoadingAC(true)); //loading modalı açılır
         const addMode = changeMode(false);
         dispatch(addMode);
         console.log("--------------------------------")
@@ -53,13 +55,15 @@ const HomeScreen = props => {
     const _render_Item = ({ item }) => {
         // item'e basıldığında id'sini gönderiyoruz
         return (
-           <View style={{flex:1}}>
+           <TouchableOpacity style={{flex:1}}
+           
+           >
                 <Item
                 onPress={()=>_onPress_Edit(item)}
                 item={item}
             >
             </Item>
-           </View>
+           </TouchableOpacity>
         )
     }
     const emptydata=itemList===null;

@@ -14,13 +14,17 @@ const Item = props => {
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [editMode, setEditMode] = useState(false);
+    const [selectedRoutine, setSelection] = useState(null);
 
 
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
 
     const _onPress_Edit_Mode = () => {
-        setEditMode(true)
+        setEditMode(true);
+    };
+    const _onPress_Edit_Mode_Off = () => {
+        setEditMode(false);
     }
     const _onPress_Edit = (item) => {
         props.onPress(item.key)

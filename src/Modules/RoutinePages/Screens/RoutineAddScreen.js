@@ -5,7 +5,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import moment from 'moment';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 import { useThemedColors } from '../../Theming';
@@ -16,6 +16,7 @@ import { cn } from '../../Theming';
 import { useAddEditSelectors } from '../Redux/RoutineRedux';
 
 import { addItem, getItemDetail, updateItem } from '../API/Firebase';
+import { setIsLoadingAC } from '../../Loading/LoadingRedux';
 
 
 
@@ -47,7 +48,7 @@ const RoutineAddScreen = props => {
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
 
-
+    const dispatch=useDispatch();
 
     useEffect(() => {
         if (props.value !== undefined) {
@@ -58,6 +59,8 @@ const RoutineAddScreen = props => {
     // Ekrana gelen bir itemKey varsa, item'in detayları çekilsin
     useEffect(() => {
         if (itemKey) {
+            dispatch(setIsLoadingAC(false));  //loading modalı kapanır
+
             getItemDetail(itemKey, item => {
                 setemptyDate(false);
                 setemptyDateEnd(false);
@@ -142,6 +145,7 @@ const RoutineAddScreen = props => {
         return true;
     }
     const _onPress_add_edit = () => {
+
         if (isEmpty() === true) {
             const item = {
                 key: itemKey,
