@@ -11,6 +11,7 @@ export default {
     [tn.username]: 'Kullanıcı Adı',
     //Home Screen
     [tn.home]: 'Anasayfa',
+    [tn.emptyList]:'Henüz bir rutin yok eklemek için + ya basınız',
     //Adding New Screen & Edit Screen
     [tn.addNew]: 'Yeni Ekle',
     [tn.routineName]: 'Rutin Adı',

@@ -34,7 +34,7 @@ const HomeScreen = props => {
         const addMode = changeMode(false);
         dispatch(addMode);
         console.log("--------------------------------")
-        props.navigation.navigate('routineAdd-screen', { itemKey })
+        props.navigation.navigate('routineAdd-screen', { itemKey:item.key })
     }
     useEffect(() => {
         // subscribe
@@ -52,7 +52,7 @@ const HomeScreen = props => {
         // item'e basıldığında id'sini gönderiyoruz
         return (
             <Item
-                onPress={_onPress_Edit}
+                onPress={()=>_onPress_Edit(item)}
                 item={item}
             >
             </Item>

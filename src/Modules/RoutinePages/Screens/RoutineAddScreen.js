@@ -42,9 +42,10 @@ const RoutineAddScreen = props => {
     const [showEnd, setShowEnd] = useState(false);
 
     const loc = useLocalization();
+    const locale = useLocale();
+
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
-    const locale = useLocale();
 
 
 
@@ -59,8 +60,8 @@ const RoutineAddScreen = props => {
         if (itemKey) {
             getItemDetail(itemKey, item => {
                 setItemName(item.title);
-                setItemStartDate(item.todaydate);
-                setItemEndDate(item.endDate);
+                setDateToday(item.todayDate);
+                setDateEnd(item.EndDate);
                 setItemRoutines(item.routines);
             });
         }
@@ -143,8 +144,8 @@ const RoutineAddScreen = props => {
             const item = {
                 key: itemKey,
                 title: itemName,
-                todaydate: todaydate,
-                endDate: endDate,
+                todayDate: todaydate,
+                EndDate: endDate,
                 routines: itemRoutines,
             };
             const onComplete = () => {
@@ -161,7 +162,7 @@ const RoutineAddScreen = props => {
 
             }
         }
-       
+
     }
 
 

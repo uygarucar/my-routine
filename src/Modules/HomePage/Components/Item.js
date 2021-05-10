@@ -50,7 +50,7 @@ const Item = props => {
                 editMode ?
                     <>
                         <TouchableOpacity style={styles.iconTouchable}
-                            onPress={_onPress_Edit}>
+                            onPress={()=>_onPress_Edit(props.item)}>
                             <View style={styles.editbuttonView}>
                                 <Icon svg={Svgs.Editbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>
                             </View>

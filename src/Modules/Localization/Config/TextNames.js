@@ -20,6 +20,7 @@ export const tn = {
     today: 'today',
     edit: 'edit',
     save: 'save',
+    emptyList:'emptyList',
     //Settings Screen
     settings: 'settings',
     colorTheme: 'colorTheme',
