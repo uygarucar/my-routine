@@ -1,4 +1,4 @@
-import {tn} from '../TextNames'
+import {tn, errorList} from '../TextNames'
 
 export default {
     //Sample
@@ -31,5 +31,17 @@ export default {
     [tn.language]: 'Language',
     [tn.english]: 'English',
     [tn.turkish]: 'Türkçe',
-    [tn.signOut]: 'Sign Out'
+    [tn.signOut]: 'Sign Out',
+
+    //error modal
+    [tn.error] : 'Error',
+    //Error Explanations
+    [errorList.error['auth/user-not-found']]: "A user with this credentials does not exist",
+    [errorList.error['auth/wrong-password']]: "Wrong password.",
+    [errorList.error['auth/emaıl-already-ın-use']]: "Email already in use",
+    [errorList.error['auth/ınvalıd-emaıl']]: "Invalid email " ,
+    [errorList.error['auth/network-request-faıled']]: "Network request failed",
+    [errorList.error['otherMistakes']]:'OSther mistakes',
+    [errorList.error['auth/too-many-requests']]:'Too many requests',
+    [errorList.error['emptySpace']]: 'At least one of the field is left empty. Fill all areas.'
 };
