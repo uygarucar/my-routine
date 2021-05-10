@@ -28,6 +28,16 @@ const constantColors = {
 		4: '#8b83bd',
 		5: '#202454'
 	},
+	green: {
+		1: '#9acd32'
+	},
+	errorColors:{//colors that can be used in error modal
+		1: '#96b7a5',
+		2: '#5d727b',
+		3: '#404757',
+		4: '#32314c',
+		5: '#1f1934'
+	}
 };
 
 const toRGBA = (hexCode, opacity) => {
@@ -94,12 +104,21 @@ const modal = {
 	routinesBackground: 'modal/routinesBackground',
 	routinesText:'modal/routinesText'
 }
+const error = {
+	background: 'error/background',
+	containerBorderColor: 'error/containerBorderColor',
+	messageTextColor: 'error/messageTextColor',
+	errorTextColor: 'error/errorTextColor',
+	errorTextBackground: 'error/errorTextBackground',
+	iconColor: 'error/iconColor'
+}
 export const cn={
 	auth,
 	settings,
 	header,
 	home,
-	modal
+	modal,
+	error
 }
 
 export const lightColors = {
@@ -144,7 +163,14 @@ export const lightColors = {
 	[modal.routinesBorder]: constantColors.greys[4],
 	[modal.containerBackground]: constantColors.white,
 	[modal.routinesBackground]: constantColors.white,
-	[modal.routinesText]: constantColors.black
+	[modal.routinesText]: constantColors.black,
+	//error
+	[error.background]: constantColors.errorColors[4],
+	[error.containerBorderColor]: constantColors.errorColors[2] ,
+	[error.messageTextColor]: constantColors.errorColors[2],
+	[error.errorTextColor]: constantColors.errorColors[2],
+	[error.errorTextBackground]: constantColors.errorColors[1],
+	[error.iconColor]: constantColors.green[1]
 };
 
 
@@ -189,6 +215,14 @@ export const darkColors = {
 	[modal.routinesBorder]: constantColors.greys[4],
 	[modal.containerBackground]: constantColors.greys[3],
 	[modal.routinesBackground]: constantColors.greys[3],
-	[modal.routinesText]: constantColors.greys[6]
+	[modal.routinesText]: constantColors.greys[6],
+
+	//error
+	[error.background]: constantColors.errorColors[4],
+	[error.containerBorderColor]: constantColors.errorColors[2] ,
+	[error.messageTextColor]: constantColors.errorColors[2],
+	[error.errorTextColor]: constantColors.errorColors[2],
+	[error.errorTextBackground]: constantColors.errorColors[1],
+	[error.iconColor]: constantColors.green[1]
 };
 
