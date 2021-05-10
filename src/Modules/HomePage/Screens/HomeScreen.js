@@ -26,10 +26,10 @@ const HomeScreen = props => {
         dispatch(addMode);
         props.navigation.navigate('routineAdd-screen')
     }
-    const _onPress_Edit = item => {
+    const _onPress_Edit = itemKey => {
         const addMode = changeMode(false);
         dispatch(addMode);
-        props.navigation.navigate('routineAdd-screen',{ itemKey: item.key})
+        props.navigation.navigate('routineAdd-screen',{ itemKey})
     }
     useEffect(() => {
         // subscribe
