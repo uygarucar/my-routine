@@ -1,5 +1,24 @@
 import database from '@react-native-firebase/database';
 import {getCurrentUser} from '../../Auth';
+import { convertRawData } from './Converter';
+
+export const subscribeToItemData = (onDataRetrieved) => {
+    const userId = getCurrentUser().uid;
+
+    database()
+        .ref(`/itemThumbnailList/${userId}`)
+        .on('value', snapshot => {
+            const rawData = snapshot.val();
+            const convertedList = convertRawData(rawData);
+            onDataRetrieved(convertedList);
+        });
+
+    return () => {
+        database()
+            .ref(`/itemThumbnailList/${userId}`)
+            .off('value');
+    }
+}
 
 export const addItem = async(item, onComplete) => {
     try{

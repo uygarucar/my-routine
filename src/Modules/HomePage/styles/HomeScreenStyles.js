@@ -59,7 +59,7 @@ export default Colors => StyleSheet.create({
       //   borderColor: Colors[cn.home.routinesBorder],
       //   borderWidth: Metrics.borderWidth,
       paddingHorizontal: 10,
-      flex: 0.9
+      flex: 0.9,
 
 
    },
@@ -69,6 +69,7 @@ export default Colors => StyleSheet.create({
       borderColor: Colors[cn.home.routinesBorder],
       borderWidth: Metrics.borderWidth,
       justifyContent: 'space-between',
+      marginBottom:Metrics.marginBottomTextinput,
    }
 
 })
