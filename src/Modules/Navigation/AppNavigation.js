@@ -68,7 +68,7 @@ const AppNavigation = props => {
                     },
                     headerTintColor: colors[cn.header.backIcon],
                     headerRight: SettingsIcon,
-                    headerLeft: ()=> null,
+                    // headerLeft: ()=> null,
 
                 }}
             />
