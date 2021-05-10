@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signInRequest, signUpRequest, setUserAC } from '../Redux/UserRedux';
 import { isValidEmail } from '../Utils/AuthValidations';
-
+import {setErrorCodeAC} from '../../Error/ErrorRedux'
 
 const AuthScreen = props => {
 
@@ -18,10 +18,16 @@ const AuthScreen = props => {
 
     const _onPress_SignUp = () => {
         if (email.length === 0 || password.length === 0 || name.length === 0) {
+            /*
             Alert.alert('Uyarı', 'Lütfen tüm alanları doldurun.');
+            */
+            dispatch(setErrorCodeAC('emptySpace'))
         }
         else if (!isValidEmail(email)) {
+            /*
             Alert.alert('Uyarı', 'Lütfen e-posta adresinizi kontrol edin.');
+            */
+            dispatch(setErrorCodeAC('auth/ınvalıd-emaıl'));
         }
         else {
             dispatch(signUpRequest(email, password, name));
@@ -31,7 +37,10 @@ const AuthScreen = props => {
 
     const _onPress_SignIn = () => {        
         if (email.length === 0 || password.length === 0) {
+            /*
             Alert.alert('Uyarı', 'Lütfen tüm alanları doldurun.');
+            */
+            dispatch(setErrorCodeAC('emptySpace'))
         }
         else {
             dispatch(signInRequest(email, password))
