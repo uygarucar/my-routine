@@ -38,12 +38,12 @@ export const errorList = {
         'auth/user-not-found': 'auth/user-not-found',
         'auth/wrong-password': 'auth/wrong-password',
         'auth/emaıl-already-ın-use': 'auth/emaıl-already-ın-use',
-        'emptySpace': 'emptySpace',
-        'auth/ınvalıd-emaıl': 'auth/invalid-emaıl',
+        'auth/ınvalıd-emaıl': 'auth/invalid-emaıl',        
         'auth/network-request-faıled': 'auth/network-request-faıled',
+        'auth/weak-password': 'auth/weak-password',
+
         'otherMistakes': 'otherMistakes',
         'auth/too-many-requests': 'auth/too-many-requests',
         'emptySpace':'emptySpace',
-        
     }
 }
