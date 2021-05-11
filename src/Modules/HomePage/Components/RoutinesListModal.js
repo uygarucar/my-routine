@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, FlatList, Text } from 'react-native';
+import { View, FlatList, Text, ScrollView } from 'react-native';
 import { getItemDetail } from '../../RoutinePages/API/Firebase';
 import {useTheme, useThemedColors, useThemeOptions } from '../../Theming/index';
 import getStyles from '../styles/RoutinesListModalStyles'
@@ -34,18 +34,11 @@ const RoutinesListModal = props => {
                 <Text style={styles.titleText}>{props.item.title}</Text>
 
             </View>
-            <View style={styles.itemsContainer}>
+            <ScrollView style={styles.itemsContainer}>
                 <Text style={styles.routinesText}>{itemRoutines}</Text>
-                {/* <Text style={styles.routinesText}>Rutin 2</Text> */}
 
-                {/* for (const key in object) {
-                    if (Object.hasOwnProperty.call(object, key)) {
-                        const element = object[key];
-                        
-                    }
-                } */}
           
-            </View>
+            </ScrollView>
 
         </View>
     )

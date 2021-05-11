@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Modal from 'react-native-modal';
-import RoutinesListModal from '../../HomePage/Components/RoutinesListModal';
-
 import { FlatList, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { cn, useThemedColors } from '../../Theming';
 import { Svgs } from '../../../StylingConstants';
@@ -20,10 +17,8 @@ import { setIsLoadingAC } from '../../Loading/LoadingRedux';
 
 const HomeScreen = props => {
     const [itemList, setItemList] = useState([]); ///------------------------------------------------------------------------
-    const [isModalVisible, setIsModalVisible] = useState(false);
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
-    const loc = useLocalization();
 
     const dispatch = useDispatch();
 
@@ -77,29 +72,6 @@ const HomeScreen = props => {
                     keyExtractor={item => item.key}
                     
                 />
-                 {/* <Modal
-                isVisible={isModalVisible}
-                // arkaplana tıklayınca fonksiyonu
-                onBackdropPress={_onPress_ModalBackdrop}
-                style={styles.modal}
-                // açılış animasyonu
-                animationIn="bounceIn"
-                // kapanış animasyonu
-                animationOut="bounceOut"
-                // açılış animasyon süresi
-                animationInTiming={100}
-                // kapanış animasyon süresi
-                animationOutTiming={300}
-                // açılış arkaplan kararma süresü
-                backdropTransitionInTiming={1500}
-                // arkaplan rengi
-                backdropColor={'black'}
-                // arkaplan opaklık
-                backdropOpacity={0.5}
-            >
-                <RoutinesListModal/>
-            </Modal>
-                */}
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.addbuttonTouchable} onPress={_onPress_Add} >
                         <Icon svg={Svgs.Addbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>

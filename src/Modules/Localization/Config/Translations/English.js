@@ -11,7 +11,7 @@ export default {
     [tn.username]: 'Username',
     //Home Screen
     [tn.home]: 'Home',
-    [tn.emptyList]:'There is no any routine yet, if you want to add one press +',
+    [tn.emptyList]:'Press + to add a routine.',
 
     //Adding New Screen & Edit Screen
     [tn.addNew]: 'Add New',
