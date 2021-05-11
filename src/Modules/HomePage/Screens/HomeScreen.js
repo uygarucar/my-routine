@@ -19,6 +19,7 @@ const HomeScreen = props => {
     const [itemList, setItemList] = useState([]); ///------------------------------------------------------------------------
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
+    const [editMode, setEditMode] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -32,8 +33,8 @@ const HomeScreen = props => {
         dispatch(setIsLoadingAC(true)); //loading modalı açılır
         const addMode = changeMode(false);
         dispatch(addMode);
-        console.log("--------------------------------")
         props.navigation.navigate('routineAdd-screen', { itemKey:item.key })
+       
     }
     useEffect(() => {
         // subscribe
@@ -46,6 +47,9 @@ const HomeScreen = props => {
             off();
         }
     }, []);
+    const onlongPress=(val)=>{
+        setEditMode(val)
+    }
 
     const _render_Item = ({ item }) => {
         // item'e basıldığında id'sini gönderiyoruz
@@ -55,6 +59,8 @@ const HomeScreen = props => {
                 <Item
                 onPress={()=>_onPress_Edit(item)}
                 item={item}
+                onlongPress={(val)=>onlongPress(val)}
+                editMode={editMode}
             >
             </Item>
            </TouchableOpacity>
@@ -65,12 +71,13 @@ const HomeScreen = props => {
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
                     <FlatList
-                    ListEmptyComponent = {EmptyComponent}
                     style={{ flexShrink: 1, flexGrow: 1 }}
                     data={itemList}
                     renderItem={_render_Item}
                     keyExtractor={item => item.key}
-                    
+                    ListEmptyComponent = {EmptyComponent}
+
+
                 />
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.addbuttonTouchable} onPress={_onPress_Add} >

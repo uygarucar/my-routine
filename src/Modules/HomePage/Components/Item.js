@@ -13,7 +13,7 @@ import RoutinesListModal from './RoutinesListModal';
 const Item = props => {
 
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [editMode, setEditMode] = useState(false);
+    // const [editMode, setEditMode] = useState(false);
     const [selectedRoutine, setSelection] = useState(null);
     const [routines, setRoutinesList] = useState(null);
 
@@ -22,11 +22,9 @@ const Item = props => {
     const styles = getStyles(themedColors);
 
     const _onPress_Edit_Mode = () => {
-        setEditMode(true);
+        props.onlongPress(true);
     };
-    const _onPress_Edit_Mode_Off = () => {
-        setEditMode(false);
-    }
+
     const _onPress_Edit = (item) => {
         props.onPress(item.key)
     }
@@ -35,7 +33,12 @@ const Item = props => {
     }
 
     const _onPress_RoutinesListModal = () => {
-        setIsModalVisible(true)
+        if(props.editMode){
+            console.log("edit mode açık")
+            props.onlongPress(false);
+ 
+        }
+       else{ setIsModalVisible(true)}
     }
 
     const _onPress_ModalBackdrop = () => {
@@ -52,7 +55,7 @@ const Item = props => {
             </TouchableOpacity>
 
             {
-                editMode ?
+                props.editMode ?
                     <>
                         <TouchableOpacity style={styles.iconTouchable}
                             onPress={()=>_onPress_Edit(props.item)}>
