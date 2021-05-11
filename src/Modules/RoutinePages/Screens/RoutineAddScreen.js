@@ -17,6 +17,7 @@ import { useAddEditSelectors } from '../Redux/RoutineRedux';
 
 import { addItem, getItemDetail, updateItem } from '../API/Firebase';
 import { setIsLoadingAC } from '../../Loading/LoadingRedux';
+import {setErrorCodeAC} from '../../Error/ErrorRedux';
 
 
 
@@ -139,7 +140,7 @@ const RoutineAddScreen = props => {
 
     const isEmpty = () => {
         if (itemName.trim() === '' || todaydate.trim() === '' || endDate.trim() === '' || itemRoutines.trim() === '') {
-            alert("Tüm Alanlar doldurulmalı");
+            dispatch(setErrorCodeAC('emptySpace'));
             return false;
         }
         return true;
