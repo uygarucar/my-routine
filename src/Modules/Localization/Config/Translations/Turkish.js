@@ -41,6 +41,8 @@ export default {
     [errorList.error['auth/emaıl-already-ın-use']]: "Email kullanımda",
     [errorList.error['auth/ınvalıd-emaıl']]: "Geçersiz email girdiniz" ,
     [errorList.error['auth/network-request-faıled']]: "Network isteği başarısız oldu",
+    [errorList.error['auth/weak-password']]: "Zayıf bir şifre girdiniz",
+
     [errorList.error['otherMistakes']]:'Başka hata',
     [errorList.error['auth/too-many-requests']]:'Çok fazla istek var',
     [errorList.error['emptySpace']]: 'Boş alan bıraktınız. Lütfen tüm alanları doldurun'
