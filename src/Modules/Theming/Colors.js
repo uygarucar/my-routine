@@ -210,7 +210,7 @@ export const darkColors = {
     [header.backIcon]: constantColors.greys[6],
     [header.rightIcon]: constantColors.white,
 	//modal
-	[modal.title]: constantColors.greys[6],
+	[modal.title]: constantColors.blues[2],
 	[modal.modalBorder]: constantColors.greys[4],
 	[modal.routinesBorder]: constantColors.greys[4],
 	[modal.containerBackground]: constantColors.greys[3],

@@ -34,7 +34,6 @@ const Item = props => {
 
     const _onPress_RoutinesListModal = () => {
         if(props.editMode){
-            console.log("edit mode açık")
             props.onlongPress(false);
  
         }
