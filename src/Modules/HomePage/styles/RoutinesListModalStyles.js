@@ -33,7 +33,12 @@ export default Colors => StyleSheet.create({
         marginBottom:Metrics.width*0.05,
     },
     routinesText:{
-        color:Colors[cn.modal.routinesText]
+        color:Colors[cn.modal.routinesText],
+        paddingLeft:Metrics.width*0.02,
+        paddingTop:Metrics.width*0.01,
+
+
+
     }
     /*,
     cityNameText: {
