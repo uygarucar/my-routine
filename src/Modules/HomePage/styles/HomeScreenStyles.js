@@ -21,10 +21,9 @@ export default Colors => StyleSheet.create({
    },
 
    buttonContainer: {
-      flex: 1,
       justifyContent: 'flex-end',
       alignItems: 'flex-end',
-
+      marginTop: Metrics.width * 0.03,
    },
 
    addbuttonTouchable: {
@@ -32,7 +31,6 @@ export default Colors => StyleSheet.create({
       height: undefined,
       aspectRatio: 1,
       padding: Metrics.width * 0.02,
-
    },
    modal: {
       justifyContent: 'center',
@@ -49,9 +47,9 @@ export default Colors => StyleSheet.create({
 
    },
    iconTouchable: {
-      flex: 0.1, 
+      flex: 0.1,
       justifyContent: 'center',
-      paddingHorizontal:Metrics.width*0.02,
+      paddingHorizontal: Metrics.width * 0.02,
    },
 
    touchButton: {
@@ -69,7 +67,7 @@ export default Colors => StyleSheet.create({
       borderColor: Colors[cn.home.routinesBorder],
       borderWidth: Metrics.borderWidth,
       justifyContent: 'space-between',
-      marginBottom:Metrics.marginBottomTextinput,
+      marginBottom: Metrics.marginBottomTextinput,
    }
 
 })
