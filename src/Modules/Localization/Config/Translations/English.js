@@ -37,11 +37,13 @@ export default {
     [tn.error] : 'Error',
     //Error Explanations
     [errorList.error['auth/user-not-found']]: "A user with this credentials does not exist",
-    [errorList.error['auth/wrong-password']]: "Wrong password.",
+    [errorList.error['auth/wrong-password']]: "Wrong password",
     [errorList.error['auth/emaıl-already-ın-use']]: "Email already in use",
-    [errorList.error['auth/ınvalıd-emaıl']]: "Invalid email " ,
+    [errorList.error['auth/ınvalıd-emaıl']]: "Invalid email format" ,
     [errorList.error['auth/network-request-faıled']]: "Network request failed",
-    [errorList.error['otherMistakes']]:'OSther mistakes',
+    [errorList.error['auth/weak-password']]: "Weak password",
+
+    [errorList.error['otherMistakes']]:'Other mistakes',
     [errorList.error['auth/too-many-requests']]:'Too many requests',
-    [errorList.error['emptySpace']]: 'At least one of the field is left empty. Fill all areas.'
+    [errorList.error['emptySpace']]: 'At least one of the field is left empty. Fill all areas'
 };
