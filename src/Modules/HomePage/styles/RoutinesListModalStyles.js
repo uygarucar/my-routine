@@ -29,7 +29,8 @@ export default Colors => StyleSheet.create({
         minHeight: Metrics.height * 0.2,
         minWidth: Metrics.width * 0.6,
         borderRadius: Metrics.borderRadiusStandard * 0.5,
-        backgroundColor: Colors[cn.modal.containerBackground]
+        backgroundColor: Colors[cn.modal.containerBackground],
+        marginBottom:Metrics.width*0.05,
     },
     routinesText:{
         color:Colors[cn.modal.routinesText]

@@ -18,9 +18,8 @@ import { setIsLoadingAC } from '../../Loading/LoadingRedux';
 
 
 const HomeScreen = props => {
-    const [itemList, setItemList] = useState(null);
+    const [itemList, setItemList] = useState([]); ///------------------------------------------------------------------------
     const [isModalVisible, setIsModalVisible] = useState(false);
-
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
     const loc = useLocalization();
@@ -55,8 +54,7 @@ const HomeScreen = props => {
     const _render_Item = ({ item }) => {
         // item'e basıldığında id'sini gönderiyoruz
         return (
-           <TouchableOpacity style={{flex:1}}
-           
+           <TouchableOpacity style={{flex:1}}           
            >
                 <Item
                 onPress={()=>_onPress_Edit(item)}
@@ -83,7 +81,29 @@ const HomeScreen = props => {
                 />
                
                 }
-               
+                 {/* <Modal
+                isVisible={isModalVisible}
+                // arkaplana tıklayınca fonksiyonu
+                onBackdropPress={_onPress_ModalBackdrop}
+                style={styles.modal}
+                // açılış animasyonu
+                animationIn="bounceIn"
+                // kapanış animasyonu
+                animationOut="bounceOut"
+                // açılış animasyon süresi
+                animationInTiming={100}
+                // kapanış animasyon süresi
+                animationOutTiming={300}
+                // açılış arkaplan kararma süresü
+                backdropTransitionInTiming={1500}
+                // arkaplan rengi
+                backdropColor={'black'}
+                // arkaplan opaklık
+                backdropOpacity={0.5}
+            >
+                <RoutinesListModal/>
+            </Modal>
+                */}
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.addbuttonTouchable} onPress={_onPress_Add} >
                         <Icon svg={Svgs.Addbutton} iconStyle={{ color: themedColors[cn.header.background] }}></Icon>

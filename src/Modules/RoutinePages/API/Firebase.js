@@ -20,6 +20,25 @@ export const subscribeToItemData = (onDataRetrieved) => {
     }
 }
 
+export const subscribeToItemDataDetails = (onDataRetrieved) => {
+    const userId = getCurrentUser().uid;
+
+    database()
+        .ref(`/itemList/${userId}`)
+        .on('value', snapshot => {
+            const rawData = snapshot.val();
+            const convertedList = convertRawData(rawData);
+            onDataRetrieved(convertedList);
+        });
+
+    return () => {
+        database()
+            .ref(`/itemList/${userId}`)
+            .off('value');
+    }
+}
+
+
 export const addItem = async(item, onComplete) => {
     try{
         const itemThumbnail = {

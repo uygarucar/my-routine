@@ -15,6 +15,7 @@ const Item = props => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [editMode, setEditMode] = useState(false);
     const [selectedRoutine, setSelection] = useState(null);
+    const [routines, setRoutinesList] = useState(null);
 
 
     const themedColors = useThemedColors();
@@ -69,7 +70,7 @@ const Item = props => {
                     </>
                     :
                     null}
-            {/* <Modal
+            <Modal
                 isVisible={isModalVisible}
                 // arkaplana tıklayınca fonksiyonu
                 onBackdropPress={_onPress_ModalBackdrop}
@@ -79,18 +80,20 @@ const Item = props => {
                 // kapanış animasyonu
                 animationOut="bounceOut"
                 // açılış animasyon süresi
-                animationInTiming={300}
+                animationInTiming={100}
                 // kapanış animasyon süresi
-                animationOutTiming={600}
+                animationOutTiming={300}
                 // açılış arkaplan kararma süresü
-                backdropTransitionInTiming={3000}
+                backdropTransitionInTiming={1500}
                 // arkaplan rengi
                 backdropColor={'black'}
                 // arkaplan opaklık
                 backdropOpacity={0.5}
             >
-                <RoutinesListModal/>
-            </Modal> */}
+                <RoutinesListModal
+                item={props.item}
+                />
+            </Modal>
         </View>
 
     );
