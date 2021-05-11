@@ -10,6 +10,7 @@ import Icon from '../../../Components/Icon';
 import { useDispatch } from 'react-redux';
 import { changeMode } from '../../RoutinePages/Redux/RoutineRedux';
 import Item from '../Components/Item';
+import EmptyComponent from '../Components/EmptyComponent'
 import { subscribeToItemData } from '../../RoutinePages/API/Firebase';
 import { useLocalization ,tn} from '../../Localization';
 import { setIsLoadingAC } from '../../Loading/LoadingRedux';
@@ -64,23 +65,18 @@ const HomeScreen = props => {
            </TouchableOpacity>
         )
     }
-    const emptydata=itemList===null;
+    
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
-                {
-                    emptydata ?
-                    <Text>{loc.t(tn.emptyList)}</Text>
-                    :
                     <FlatList
+                    ListEmptyComponent = {EmptyComponent}
                     style={{ flexShrink: 1, flexGrow: 1 }}
                     data={itemList}
                     renderItem={_render_Item}
                     keyExtractor={item => item.key}
-
+                    
                 />
-               
-                }
                  {/* <Modal
                 isVisible={isModalVisible}
                 // arkaplana tıklayınca fonksiyonu
