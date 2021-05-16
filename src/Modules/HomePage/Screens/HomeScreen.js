@@ -11,7 +11,6 @@ import EmptyComponent from '../Components/EmptyComponent'
 import { subscribeToItemData } from '../../RoutinePages/API/Firebase';
 import { setIsLoadingAC } from '../../Loading/LoadingRedux';
 
-import LottieView from 'lottie-react-native';
 
 
 
@@ -85,7 +84,6 @@ const HomeScreen = props => {
                     </TouchableOpacity>
                 </View>
             </View>
-            <LottieView source={require('./animation.json')} autoPlay loop />
         </SafeAreaView>
 
 
