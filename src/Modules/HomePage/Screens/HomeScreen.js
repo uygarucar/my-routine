@@ -9,9 +9,9 @@ import { changeMode } from '../../RoutinePages/Redux/RoutineRedux';
 import Item from '../Components/Item';
 import EmptyComponent from '../Components/EmptyComponent'
 import { subscribeToItemData } from '../../RoutinePages/API/Firebase';
-import { useLocalization ,tn} from '../../Localization';
 import { setIsLoadingAC } from '../../Loading/LoadingRedux';
 
+import LottieView from 'lottie-react-native';
 
 
 
@@ -85,7 +85,7 @@ const HomeScreen = props => {
                     </TouchableOpacity>
                 </View>
             </View>
-
+            <LottieView source={require('./animation.json')} autoPlay loop />
         </SafeAreaView>
 
 
