@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor:'transparent'
+        backgroundColor: 'transparent'
     }
 })
 
@@ -34,9 +34,9 @@ const LoadingManager = props => {
                 {/* <ActivityIndicator color="white" size="large" /> */}
                 <LottieView
                     style={
-                        { backgroundColor: 'transparent',
-                            width:Metrics.width*1                        
-                    }
+                        {
+                            width: Metrics.width * 1
+                        }
                     }
 
                     source={require('./animation.json')} autoPlay loop />
