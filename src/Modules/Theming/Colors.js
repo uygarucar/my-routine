@@ -112,13 +112,24 @@ const error = {
 	errorTextBackground: 'error/errorTextBackground',
 	iconColor: 'error/iconColor'
 }
+const searchBar = {
+	icon: 'searchBar/icon',
+	inputContainerBackground: 'searchBar/inputContainerBackground',
+	inputContainerBorderColor: 'searchBar/inputContainerBorderColor',
+	containerBackgroundColor: 'searchBar/containerBackgroundColor',
+	containerBorderColor: 'searchBar/containerBorderColor',
+	leftIconContainer: 'searchBar/leftIconContainer',
+	placeholderTextColor: 'searchBar/placeholderTextColor'
+
+}
 export const cn={
 	auth,
 	settings,
 	header,
 	home,
 	modal,
-	error
+	error,
+	searchBar
 }
 
 export const lightColors = {
@@ -170,7 +181,16 @@ export const lightColors = {
 	[error.messageTextColor]: constantColors.errorColors[2],
 	[error.errorTextColor]: constantColors.errorColors[2],
 	[error.errorTextBackground]: constantColors.errorColors[1],
-	[error.iconColor]: constantColors.green[1]
+	[error.iconColor]: constantColors.green[1],
+	//searchBar
+	[searchBar.icon]: constantColors.greys[6],
+	[searchBar.inputContainerBackground]: constantColors.white,
+	[searchBar.inputContainerBorderColor]: constantColors.black,
+	[searchBar.containerBackgroundColor]: constantColors.white,
+	[searchBar.leftIconContainer]: constantColors.white,
+	[searchBar.containerBorderColor]: constantColors.black,
+	[searchBar.placeholderTextColor]: toRGBA(constantColors.greys[3], 40)
+
 };
 
 
@@ -223,6 +243,15 @@ export const darkColors = {
 	[error.messageTextColor]: constantColors.errorColors[2],
 	[error.errorTextColor]: constantColors.errorColors[2],
 	[error.errorTextBackground]: constantColors.errorColors[1],
-	[error.iconColor]: constantColors.green[1]
+	[error.iconColor]: constantColors.green[1],
+
+	//searchBar
+	[searchBar.icon]: constantColors.greys[6],
+	[searchBar.inputContainerBackground]: constantColors.greys[3],
+	[searchBar.inputContainerBorderColor]: constantColors.greys[6],
+	[searchBar.containerBackgroundColor]: constantColors.greys[3],
+	[searchBar.containerBorderColor]: constantColors.greys[6],
+	[searchBar.leftIconContainer]: constantColors.greys[3],
+	[searchBar.placeholderTextColor]: toRGBA(constantColors.white, 35),
 };
 
