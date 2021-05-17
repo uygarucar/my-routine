@@ -31,7 +31,9 @@ export const tn = {
     turkish: 'turkish',
     signOut: 'signOut',
     //error modal
-    error: 'error'
+    error: 'error',
+    //search bar placeholder text
+    search: 'search'
 };
 export const errorList = {
     error: {

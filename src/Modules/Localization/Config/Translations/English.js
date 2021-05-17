@@ -35,6 +35,10 @@ export default {
 
     //error modal
     [tn.error] : 'Error',
+    
+    //Search bar placeholder text
+    [tn.search]: 'Search here...',
+
     //Error Explanations
     [errorList.error['auth/user-not-found']]: "A user with this credentials does not exist",
     [errorList.error['auth/wrong-password']]: "Wrong password",

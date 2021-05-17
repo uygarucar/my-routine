@@ -68,6 +68,27 @@ export default Colors => StyleSheet.create({
       borderWidth: Metrics.borderWidth,
       justifyContent: 'space-between',
       marginBottom: Metrics.marginBottomTextinput,
-   }
+   },
+   searchIcon: {
+      color: Colors[cn.searchBar.icon]
+   },
+   searchBarInputContainer:{
+      backgroundColor: Colors[cn.searchBar.inputContainerBackground],
+      //borderColor: Colors[cn.searchBar.inputContainerBorderColor],
+      //borderWidth: 1
+   },
+   searchBarContainer:{
+      backgroundColor: Colors[cn.searchBar.containerBackgroundColor],
+      //borderColor: Colors[cn.searchBar.containerBorderColor],
+      //borderWidth: StyleSheet.hairlineWidth,
+      marginTop: 0,
+      marginBottom: 1,
+      marginHorizontal: -4, 
+   },
+   leftIconContainer: {
+      backgroundColor: Colors[cn.searchBar.leftIconContainer]
+   },
+   
+   
 
 })

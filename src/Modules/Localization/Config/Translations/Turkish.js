@@ -35,6 +35,10 @@ export default {
 
     //Error modal
     [tn.error]: 'Hata',
+
+    //Search bar placeholder text
+    [tn.search]: 'Burada arayın...',
+
     //Error Explanations
     [errorList.error['auth/user-not-found']]: "Kullanıcı bulunamadı",
     [errorList.error['auth/wrong-password']]: "Yanlış şifre girdiniz",
