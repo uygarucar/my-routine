@@ -19,6 +19,7 @@ const HomeScreen = props => {
     const [masteredItemList, setMasteredItemList] = useState([]); ///
     const [filteredItemList, setFilteredItemList] = useState([]); ///
     const [isSearchTextEmpty, setIsSearchTextEmpty] = useState(true);
+    
     //------------------------------------------------------------------------
     const themedColors = useThemedColors();
     const styles = getStyles(themedColors);
@@ -108,7 +109,8 @@ const HomeScreen = props => {
         }
     }, [SearchExists])
 
-
+    //update of filteredItemList will be triggered by change of masteredItemList from now. 
+    useEffect(()=> {searchFilterFunction(search)}, [masteredItemList])
 
     const _render_Item = ({ item }) => {
         // item'e basıldığında id'sini gönderiyoruz
