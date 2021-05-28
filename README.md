@@ -20,8 +20,8 @@ This mobile app was produced in React Native language with the contribution of 3
   * React Navigation
   * Firebase Authorization & Firebase Real Time Database
   
-## Where I've involved
-  I've involved in
+## Where I've been involved
+  I've been involved in
   * building the foundation of theming and localization
   * building UI of authorization screen
   * creation of modal screen
@@ -30,18 +30,18 @@ This mobile app was produced in React Native language with the contribution of 3
   * creating search bar 
   
  ## ScreenShots
- # Login & Sign up Screen
-  ![Image of Authorization Screen](https://lh3.googleusercontent.com/e02UZ2r2L6oK87e1PVzXJRjSMKn76zHqC_vHnUhrl81tL6A5DyvzE-gPz-J5AUzpVQWUjwE_B13WrcSdAvg3TddTjveGuquKZNFX7h2gUu1cau1YP8K6Iw9AJgB3RcuavlWDVrBsVb35ODz6tFzPka8qFkUJld0e2_C-v88sNsbBDlWgkq7qcrIZxaMCNkwUGbewq-O3J1EOaFJD2CfCd3YvbGTOVSNIg5tHRQBh75sjxUpBEEFSdNWA6vtnzhzX52yVdlkeYg7DyEkKLKxfJte06AELHsnUm39l16GMYwYN1Fx42z5IP5v1VMLS4Jd55OTm0_gIBRwg320Zu7hN6YsFlfYIGvQ8LlyxrEifDoOZyr5k-qoVasX6xiWrXvFpkPuXFKwmnBoO2jF95F5Ksqjgl_cYlxoseZP3m4w61Dnv3qhg6msBMfWTwAVyKtSQ-j_YGVXZ9vPe6-rADEyeAxdc3VHIhfeDOJ56TsyA6L-ixjSEUmTkRklkBCAYDi1yj79p3g5I3wYCUqx9vWBf8bfd5wu0e-tuhx32C-iKCI8qzWi-vyQaXVLznEvyOAM0kDgr5n4I6wChnatSKFFjcOCDoxZDUaIU3H1bzRrcPgORaDgcXzi90CbaFLx-AxbYqbkD6X4uh95E6X1ok-BiEq2XqZYkN1t1eS2y9zKLQMndSwHOXC9wk1nvxUSav9vq97jNx2uqvCJnqESkD9iXiMY=w321-h694-no?authuser=0)
+ ### Login & Sign up Screen
+  ![Image of Authorization Screen](https://images2.imgbox.com/98/a6/g08LzwwI_o.png)
  
- # Loading Animation
-  ![Image of Loading Animation](https://lh3.googleusercontent.com/Fendsw0qQtQ2wNJ5HsNviuEvg3rkTZqq4oWdderTBizB0owQwrmRVHC5zSspqKsYY_b4kibjU3udi9vf-PXk7RHxjFltt-ivS7Z2htJgUzKxcqz4x-UNxEluhJllNalF4M7bUm4ZCs3k_YcEm6NXnvR0fgp6g3UtQSaLlgVuewTl7vYOsncCRIO1vnMzodBWBlQe9qKjTvwCLbOJX6gXm7rr06oUlB4mTa8ySBuqORNTGSxrnf0IVztrNfmdup2YOygN15Xj8yEyxv9jvtBJs10eLaXs5qQlFuC-vAbjKyTumpRlAJ-yaCPcP7qPpXzXKpA55QU6_HrMTYjggNc5yLuczTYjyiK-AQRwAq1ByuiWJ-B6G_cob9TBhGeLiLGwwU4o0D-1qPt-g16k_vgdPwxGhPJ-GGMIIFrF7_IPv4dN-y9XefUqtR7HsjaDqJMVu2n5qSNyagk_lcXuNjIlc4VdA6nMeofpPARHN-EyrONqaN_-7dTbKkGNy-p10evd6ZEAlneV2YBUY86-CK6RBQ2iXYE90oI3NEKf9Dyv11BgQ1d4LRwl0gwrijk4DXEeDGDrwlHtRetAVIjpQkeXAtncG3zpDxSGj2R_JIAB4mvb5-WMUS5RZ4xyNuMskZUsnhg6Qh5CG1xu7qUR7_LA6kQ7CPYTSb0_m5Ef0MiMlThixWmm5QFQ33-GUcprXRLgyo5I4T44dO0M5w35Oqdvokw=w321-h694-no?authuser=0)
+ ### Loading Animation
+  ![Image of Loading Animation](https://images2.imgbox.com/28/98/aUwnaM2l_o.png)
   
- # Add Screen
- ![Image of Add Screen](https://lh3.googleusercontent.com/coWRZJN2kGgM-hhh8XQdgheA9dsE1qr6AsakEeAUnE8Un1OHL3Ve6GxMqOI8UNXqAxzcGswii1KtX2mZ6wdabD51lU1XCUfngpwnrpsmR6g0bDnfYDaOs_1b0fRzv0FeleSORdqmr7vDzhmQqn5gpPUKuq1WXw1g63eiTdJY8IkXtlUyCZPWFLtLU9ZZ-xs4rHGeMDXRTrmpb0n-s2fnmgLCe1CLedsuSEwly76nt06nL8NqYnS14iEwmY66sRvB4R2NXbPCAzQBfk7fqm6CTDRI1Mqsy1SMcI9KqwXtubTSc7APKtuaS5BzQUIgkIA3Lvw0Fl-mAuNAxgYAlgeYWV7MaPb4rJzvYm8DVXO1pGZ4gUHO3o_oaazYTAq7MFzvcH9l4zr7t8C9iZurJ_SNKKVGpQTfltPtwjY9NwWnz14xxO0UFWkHHTLcUMKP9RjZJAMp46b6yQgJfUrm_Y7Mzc96rJ3YSsCPbT7BGDkNfqrl_VpYMxfs60O6zmoucFB6bhIEyD6UU6prTjh55z1KkmXGc1RpwF4hfnTgVckiNt58i74c9BgCjlGlYqe47DE9YAUFTPVqOxZoC-VrWE4l_mmVGXJ49Nt4gmb9nUcKZ6Gd7fOPQWJzV__uWXg8rmURPDU-xiaw1WE5OVU9TU-RMEOMv0T2BS9I4UcAM2dakX0TgSRk30s8eZ0dmA3g1ZIYvLjZSSGLFS5vMszxTcCNlj0=w253-h548-no?authuser=0)
+ ### Add Screen
+ ![Image of Add Screen](https://images2.imgbox.com/21/fc/pc8PxDpG_o.png)
  
- # Home Screen & Modal
- ![Image of Monitoring an Item](https://lh3.googleusercontent.com/hh-01ydgVJZLlxP5jHfkRYdLdIlOgJ6QnHE5_3AITe4nwPfPJK56QFE-VZ0HzX-LmUZXUOjWQXe57nErY8lxE2Knt-y5kxUQEkGcXkC_xZjr9r2p5m9dx9zhIaITjaL9rbZYS-_hp3G_IusiuD63a9Q6-U4CGy1CsQoDzd9SY-EA0UKoMOnLgVEmUw2ZwDDEJ3HZPfeAU_LkGRUc-12hzezqqB-Fl7B2JawOL_bLRgqP0WmHZkO59JN5xUDnpLpxVWI4NVClVaX7oZfLdECcp2XGQN8kOyKY25eDvDsKvBg49staINqYRI7-dsj-osSHMiLYzOZfUnwmzk-4cZh2SlAQczjHkrmRx4alUd0oZk4NsmJkFab660h3dt_BhSwSgOPvI1ENd2ekgfQFpqezfgltG8b9RHmMK_WqLj58VVtFGFuOWe9v0mp99uYo1obbjqzvVZKndsbYNG5CB63q66mBPS0C5lCKBjDT2hwWvFQHxi8sr6G9Pp2oflXIV8w8YQNitYI-PCFdrsxW64iFdcqyy-GDmr5SlY_UD1D2WbaoGuODWohaWo_1-eVmqu6xWeRH3r6_eE0uM1-brB3zdpLFLtwPgZJJ33yLWBz5hi8qUU6DuxK2E1yhvDDr-rsP-WMIKor6mBIDWLaNQRIKIZX7_djJrT_UBLjFKfy55yz2mOGIMzolKalu2ZtZuTFA72Kutgarqvh7a7MTF1QIhbY=w253-h548-no?authuser=0)
+ ### Home Screen & Modal
+ ![Image of Monitoring an Item](https://images2.imgbox.com/bb/00/8TPnmf6H_o.png)
  
- # Settings Screen with Dark Theme
- ![Image of Settings Screen with Dark Theme](https://lh3.googleusercontent.com/OIG18S_iyqfPMvRs1-tKa1im6oym92JvVbqH_8rkuci8hCWJlrs5ycI45O_NUOi_3kZ1E4GA6ewxmv_YJxvsFZIVhvBWfc2YyX0Kmgzi_EbCPcshXKigLcWZQ7MyM8mvFoQ40Crnc8F9czblsYT6zGz0869lipCf8PadVjUdKkJfx1N9e3yTfqDcHvdj7vTOXvD6LO75CRoPu11g0FDht1RxIScbF0qEoSawRL8cfFKQ-jWfyTIky7JMsajTQM3BepyLmnNbQMgGv1BbzOlCTERjuMmG9y9YcxvEXDlpmrWWrPE4puwVpcWnFI55KjeBFDdf0Vbkf9rk91n3TRnDy3jlF8GClnjq7S_JFOR0GGDMviWxKhSutRdnqvuR7Hn46UJrD8MCDmzQNXFIrxpl3C9sbE3UBGyCzeN4ZpgluZC7Gq8rT0flb0-dSspOXds3odgyzvgmpBMpZ7v0JDafyq9YOwzLqtandOKx1o2mhMuyKTfCf9Qi7WD7oqqvZazpgtNpRuEPRToileI-JbWwN2FTRubewCPR3_YlYN1680dKjEtE_kEmL-PZSFC3zCoIKAMT2-DQHTHP6nPRdYyES8xyOFqEgVd3ihtfp4Fls7CH7_73PXJYVowXGMJ6m_-mZqo0JDVISz4B7gvF6CMHFwkQ2H45oEw2K-w7Q_72-43zkCqvk7K4_h9UupCgOFnch7gANNd-PUrQOSq-3GaHSO4=w253-h548-no?authuser=0)
+ ### Settings Screen with Dark Theme
+ ![Image of Settings Screen with Dark Theme](https://images2.imgbox.com/f8/da/RImI12Ye_o.png)
  
